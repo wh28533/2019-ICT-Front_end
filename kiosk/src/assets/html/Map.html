@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url(./image/background.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #Home{
+                position: absolute;
+                right: 15.5%;
+                margin-top: 1%;
+                width: 5.5%;
+                height: auto;
+                margin-right: 2%
+            }
+            #Go_Back{
+                position: absolute;
+                right: 8%;
+                margin-top: 2%;
+                width: 6%;
+                height: auto;
+                margin-right: 2%
+            }
+            #Menu{
+                position: absolute;
+                right: 1%;
+                margin-top: 2%;
+                width: 6%;
+                height: auto;
+                margin-right: 1%
+            }
+            .btn-group button {
+                background-color: rgba(204, 208, 218, 0.5); /* Green background */
+                border: 1px solid rgba(200, 200, 200, 0.7); /* Green border */
+                border-radius: 3px;
+                color: black; 
+                font-size: 120%;
+                font-weight: bold;
+                cursor: pointer; /* Pointer/hand icon */
+                width: 20%; /* Set a width if needed */
+                height: 10%;
+                display: block; /* Make the buttons appear below each other */
+                margin-right: 1.5%;
+            }
+            .btn-group button:not(:last-child) {
+                border-bottom: none; /* Prevent double borders */
+            }
+            .btn-group button:hover {
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+            .icons{
+                width: 20%;
+                height: 75%;
+                margin-left: 3%;
+            }
+            #btn_group_start{
+                position: relative;
+                top: 14%;
+            }
+        </style>
+    </head>
+    <body>
+        <a href='KSTU.html'><img id = Home src='./image/home.png' title='HOME'></a>
+        <a href='#'><img id = Go_Back src='./image/go_back.png' title='Go_Back'></a>
+        <a href='#'><img id = Menu src='./image/menu.png' title='MENU' ></a>
+    
+        <div align = 'right' class = btn-group id = btn_group_start>
+            <button id = btn_group_start>
+                <img align = 'left' class = icons src = "./image/map.png" alt = "Map">
+                <br/>Map
+            </button>
+            <button>
+                <img align = 'left' class = icons src = "./image/schedule.png" alt = "Map">
+                <br/>Schedule
+            </button>
+            <button>
+                <img align = 'left' class = icons src = "./image/faculties.png" alt = "Map">
+                <br/>Faculties
+            </button>
+            <button>
+                <img align = 'left' class = icons src = "./image/institutes.png" alt = "Map">
+                <br/>Institutes
+            </button>
+            <button>
+                <img align = 'left' class = icons src = "./image/history.png" alt = "Map">
+                <br/>History
+            </button>
+            <button>
+                <img align = 'left' class = icons src = "./image/info.png" alt = "Map">
+                <br/>Information
+            </button>
+        </div>
+    </body>
+</html>

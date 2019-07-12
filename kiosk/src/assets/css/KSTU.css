@@ -1,0 +1,12 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    color:#ffffff;
+    text-decoration: none;
+}
+*:hover{
+    color: #bbbbbb;
+    text-decoration: none;
+    cursor: pointer;
+} 

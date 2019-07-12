@@ -1,0 +1,119 @@
+<html>
+<head>
+<style>
+    .chan{
+        position: relative;
+        top: 10%;
+        margin-left: 9%;
+        text-align: center;
+        font-size: 400%;
+        color: white;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .chan_2{
+        position: relative;
+        top: 6%;
+        margin-left:8%;
+        font-size: 150%;
+        color: white;
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    body{
+        background-image: url(../image/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #logo{
+        position: absolute;
+        left: 24%;
+        top: 6%;
+        width: 11%;
+        height: auto;
+    }
+    #language_block{
+        position: absolute;
+        bottom: 2%;
+        text-align: right;
+    }
+    #contact{
+        position: absolute;
+        bottom: 0.5%;
+        color: white;
+    }
+    .buttons{
+        border-radius: 12px;
+        border: none;
+        font-size: 150%;
+        font-weight: bold;
+        width: 27%;
+        height: 13%;
+        margin-left: 3%;
+        margin-right: 3%;
+
+    }
+    .icons{
+        width: 20%;
+        height: 75%;
+        margin-left: 3%;
+    }
+    .lang_icon{
+        width: 8%;
+        height: 8%;
+    }
+</style>
+
+</head>
+<body>
+    <img id = logo src = "../image/kstu_symbol.png" alt = "KSTU_logo">
+    <h1 class = chan>Welcome to KSTU</h1> 
+    <p class = chan_2>Kyrgyz State Technical University named after I.Razzakov</p>
+    <br/><br/><br/>
+    <div align="center">
+        <button class = buttons type = "button" href ='#'>
+            <img align = 'left' class = icons src = "../image/Asset 4.png" alt = "Map">
+            <br/>Map<br/>
+        </button>
+        <button class = buttons type = "button" href = '#'>
+            <img align = 'left' class = icons src = "../image/Asset 7.png" alt = "Schedule">
+            <br/>Schedule
+        </button>
+    </div>
+    <br/>
+    <div align="center">
+            <button class = buttons type = "button" href = '#'>
+                <img align = 'left' class = icons src = "../image/Asset 5.png" alt = "Faculties">
+                <br/>Faculties<br/>
+            </button>
+            <button class = buttons type = "button" href = '#'>
+                <img align = 'left' class = icons src = "../image/Asset 10.png" alt = "Institutes">
+                <br/>Institutes<br/>
+            </button>
+    </div>
+    <br/>
+    <div align = "center">
+            <button class = buttons type = "button" href= '#'>
+                <img align = 'left' class = icons src = "../image/Asset 3.png" alt = "History">
+                <br/>History<br/>
+            </button>
+            <button class = buttons type = "button" href='#'>
+                <img align = 'left' class = icons src = "../image/Asset 5.png" alt = "Information">
+                <br/>Information<br/>
+            </button> 
+    </div>
+    <br/></br>
+    <ul id = contact style = "list-style: none;">
+        <li>Reception: +996 (312) 545 162</li>
+        <li>Fax: +996 (312) 545 162</li>
+        <li>e-mail: rector@kstu.kg</li>
+        <li>website: www.kstu.kg</li>
+    </ul>
+    <div className="language_block">
+        <a href = "#"><img class = lang_icon src = "../image/kg.png" title="park_sewha"></a>
+        <a href = "#"><img class = lang_icon src = "../image/eng.png" title="english"></a>
+        <a href = "#"><img class = lang_icon src = "../image/ru.png" title="russian"></a>
+    </div>
+</body>
+
+</html>
