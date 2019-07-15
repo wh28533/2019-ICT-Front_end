@@ -1,0 +1,25 @@
+
+            #Home{
+                position: absolute;
+                right: 15.5%;
+                top: 3%;
+                width: 5.5%;
+                height: auto;
+                margin-right: 2%
+            }
+            #Go_Back{
+                position: absolute;
+                right: 8%;
+                top: 4%;
+                width: 6%;
+                height: auto;
+                margin-right: 2%
+            }
+            #Menu{
+                position: absolute;
+                right: 1%;
+                top: 4%;
+                width: 6%;
+                height: auto;
+                margin-right: 1%
+            }

@@ -1,0 +1,39 @@
+#Name{
+    position: absolute;
+    margin-top:3%;
+    left:5%;
+    color:white;
+    font-size:40pt;
+}
+.info_table_position{
+    position: absolute;
+    top: 25%;
+    left: 2%;
+}
+.info_screen{
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+.info_paragraph{
+    font-size: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    position: relative;
+    left:20%;
+    right: 30%;
+    margin-bottom: 15%
+}
+.team_info{
+    font-size: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left:20%;
+    right: 10%;
+    margin-bottom: 20%;
+}
+.info_bold{
+    font-weight: bold;
+    font-size: 110%;
+}

@@ -1,0 +1,30 @@
+.menu_bar_btn-group button {
+    background-color: rgba(204, 208, 218, 0.5); /* Green background */
+    border: 1px solid rgba(200, 200, 200, 0.7); /* Green border */
+    border-radius: 3px;
+    color: black; 
+    font-size: 120%;
+    font-weight: bold;
+    cursor: pointer; /* Pointer/hand icon */
+    width: 300%; /* Set a width if needed */
+    height: 45%;
+    display: block; /* Make the buttons appear below each other */
+    margin-right: 1.5%;
+}
+.menu_bar_btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+.menu_bar_btn-group button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.menu_bar_icons{
+    width: 20%;
+    height: 75%;
+    margin-left: 3%;
+}
+#menu_bar_btn_group_start{
+    position: absolute;
+    top: 18%;
+    right: 18%;
+    z-index: 1;
+}

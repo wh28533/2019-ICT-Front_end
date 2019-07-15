@@ -1,75 +1,63 @@
-.chan{
-    position: relative;
-    top: 10%;
+.chan {
+    text-align: center;
     margin-left: 12%;
-    text-align: center;
-    font-size: 400%;
+    font-size: 420%;
     color: white;
-    padding: 0px;
-    margin-bottom: 10px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.chan_2{
-    margin: 0px;
 
-    position: relative;
-    top: 0%;
-    margin-left:12%;
-    font-size: 150%;
+.chan_2 {
+    margin-left: 10%;
+    text-align: center;
+    font-size: 170%;
     color: white;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
-body{
-    background-image: url(../image/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family:Arial, Helvetica, sans-serif;
-}
-#logo{
+
+
+#main_logo {
     position: absolute;
-    left: 24%;
-    top: 4%;
+    left: 19%;
+    top: 12%;
     width: 11%;
-    padding-right: 50px;
     height: auto;
 }
-.language_block{
+
+#main_language_block {
     position: absolute;
     bottom: 2%;
     text-align: right;
 }
-#contact{
+
+#main_contact {
     position: absolute;
     bottom: 0.5%;
     color: white;
 }
-.buttons{
+
+.main_buttons {
+    margin-left: 4%;
+    width: 93%;
+    height: 98%;
     border-radius: 12px;
     border: none;
     font-size: 150%;
     font-weight: bold;
-    width: 27%;
-    height: 13%;
-    margin-left: 3%;
-    margin-right: 3%;
-    text-align: center;
-    padding: auto;
-    justify-content: center;
+    padding: 2.5% 2.5%
+}
 
+.main_text_in{
+    margin-left: 4%;
 }
-.icons{
-    width: 20%;
-    height: 75%;
-    align-content: center;
-    float: left;
-    padding-top: 3px;
-    margin-left: 3%;
+.main_icons {
+    margin-left: 8%;
 }
-.lang_icon{
+
+.main_lang_icon {
     width: 8%;
     height: 8%;
 }
-.rr{
+.main_rr{
     list-style: none;
 }
