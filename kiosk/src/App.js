@@ -8,7 +8,7 @@ import RightButtons from './components/RightButtons/RightButtons';
 import MenuBar from './components/RightButtons/MenuBar';
 import InfoPage from './components/InfoPage/InfoPage';
 import Shedule from './components/Schedule/Schedule';
-
+import Instituties from './components/Instituties/Instituties';
 
 import './assets/css/bootstrap.css';
 import '../src/assets/css/MainPage.css';
@@ -104,6 +104,7 @@ class App extends React.Component {
       />,
 
       faculty_first: <FacultyFirst/>,
+      instituties: <Instituties/>,
 
       info_page:<InfoPage/>,
       shedule_page: <Shedule/>,
@@ -126,7 +127,11 @@ class App extends React.Component {
       view_page = this.state.faculty_first;
       right_button = this.state.right_button;
     }
-
+    else if(now_page === 'Instituties')
+    {
+      view_page = this.state.instituties;
+      right_button = this.state.right_button;
+    }
     else if (now_page === 'InfoPage')
     {
        view_page = this.state.info_page;

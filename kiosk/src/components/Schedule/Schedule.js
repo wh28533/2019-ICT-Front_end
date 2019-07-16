@@ -19,7 +19,7 @@ class Schedule extends React.Component{
                </header>
 
                <table border="2">
-                   <th></th>
+                   <th>day<br/>time</th>
                    <th id="Time">Mon</th>
                    <th id="Time">Tue</th>
                    <th id="Time">Wed</th>

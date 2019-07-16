@@ -50,7 +50,11 @@ class content extends React.Component{
                 </button>
             </div>
             <div className="col-lg-5">
-                <button type="button" className="btn-light main_buttons" href='#'>
+                <button type="button" className="btn-light main_buttons" onClick = {function(e){
+                    e.preventDefault();
+                    this.props.onChangePage("Instituties");
+
+                }.bind(this)}>
                     <div className="main_icons" align='left'>
                         <img className="media-object" src={require( '../.././assets/image/Asset 10.png')} alt="Institutes" width="20%"/>
                             <span className="main_text_in">Institutes</span>
