@@ -7,12 +7,14 @@ import MainFooter from './components/MainPage/MainFooter';
 import RightButtons from './components/RightButtons/RightButtons';
 import MenuBar from './components/RightButtons/MenuBar';
 import InfoPage from './components/InfoPage/InfoPage';
+import Shedule from './components/Schedule/Schedule';
+
 
 import './assets/css/bootstrap.css';
 import '../src/assets/css/MainPage.css';
 
 import './App.css';
-import { bindExpression } from '@babel/types';
+// import { bindExpression } from '@babel/types';
 
 class App extends React.Component {
 
@@ -31,8 +33,9 @@ class App extends React.Component {
         <MainContent 
         onChangePage = {function(next_page){
           var new_page_storeage = this.state.page_storeage.slice();
+
           new_page_storeage.push(next_page);
-         
+
           this.setState({
              page_storeage : new_page_storeage
           });
@@ -102,7 +105,8 @@ class App extends React.Component {
 
       faculty_first: <FacultyFirst/>,
 
-      info_page:<InfoPage/>
+      info_page:<InfoPage/>,
+      shedule_page: <Shedule/>,
     }
   }
   render(){
@@ -127,6 +131,11 @@ class App extends React.Component {
     {
        view_page = this.state.info_page;
        right_button = this.state.right_button;
+    }
+    else if (now_page === 'Schedule')
+    {
+      view_page = this.state.shedule_page;
+      right_button = this.state.right_button;
     }
     if(this.state.check_menu_bar === true)
     {

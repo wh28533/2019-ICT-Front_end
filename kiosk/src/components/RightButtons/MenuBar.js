@@ -5,7 +5,6 @@ import '../../././assets/css/bootstrap.css';
 
 
 class MenuBar extends React.Component {
-    
     constructor(props)
     {
         super(props);
@@ -55,6 +54,9 @@ class MenuBar extends React.Component {
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/info.png")} alt = "Information"/>
                 <br/>Information
             </button>
+                <table>
+
+                </table>
         </div>
         );
     }

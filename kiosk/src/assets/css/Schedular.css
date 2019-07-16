@@ -1,0 +1,95 @@
+
+
+#Name {
+    position: absolute;
+    margin-top: 3%;
+    left: 5%;
+    color: white;
+    font-size: 40pt;
+}
+
+#Home {
+    position: absolute;
+    right: 15.5%;
+    margin-top: 2%;
+    width: 5.5%;
+    height: auto;
+    margin-right: 2%
+}
+
+#Go_Back {
+    position: absolute;
+    right: 8%;
+    margin-top: 3%;
+    width: 6%;
+    height: auto;
+    margin-right: 2%
+}
+
+#Menu {
+    position: absolute;
+    right: 1%;
+    margin-top: 3%;
+    width: 6%;
+    height: auto;
+    margin-right: 1%
+}
+
+#Select {
+    width: 80%;
+    height: 10%;
+}
+
+#Field {
+    width: 12%;
+    height: 37%;
+    position: absolute;
+    right: 2.3%;
+    top: 40%;
+}
+
+#Time {
+    text-align: center;
+}
+
+table {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+}
+
+td {
+    width: 50px;
+    height: 65px;
+}
+
+.navbar {
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+}
+
+.navbar .navbar-collapse {
+
+    margin-left: 38%;
+    margin-top: 45%;
+    margin-right: 36%;
+
+}
+
+.button_deco {
+    width: 100%;
+    height: 80%;
+    border-radius: 12px;
+}
+
+.button_text {
+    color: black;
+    font-weight: bold;
+    font-family: 'Arial';
+    text-align: middle;
+    border-radius: 10px;
+}

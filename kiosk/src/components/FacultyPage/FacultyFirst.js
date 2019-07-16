@@ -5,7 +5,6 @@ import '../../././assets/css/facultiefirst.css';
 
 
 class FacultyFirst extends React.Component{
-
     constructor(props)
     {
         super(props);
