@@ -19,8 +19,8 @@ class FacultyFirst extends React.Component{
             let id ='1';
             axios.get('https://e-kundoluk-flask-server.herokuapp.com/api/timetable/klass/'+id).
                 then(res=>{
-                    const faculty=res;
-                    console.log(res);
+                    const faculty=res.data;
+                    console.log(res.data);
                     this.setState({faculty})
             })
 
