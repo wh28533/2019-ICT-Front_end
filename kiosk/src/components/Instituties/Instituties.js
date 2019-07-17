@@ -19,7 +19,6 @@ class Instituties extends React.Component{
             const institut=res.data;
             console.log(res.data)
             this.setState({institut})
-
         })
 
     }
