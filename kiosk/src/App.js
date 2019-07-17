@@ -10,8 +10,11 @@ import InfoPage from './components/InfoPage/InfoPage';
 import Shedule from './components/Schedule/Schedule';
 import Instituties from './components/Instituties/Instituties';
 
+import {IntlProvider} from "react-intl";
+import messages from "./Translations/Tranlatetions";
 import './assets/css/bootstrap.css';
 import '../src/assets/css/MainPage.css';
+
 
 import './App.css';
 // import { bindExpression } from '@babel/types';
@@ -23,14 +26,15 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      greeting: "ru",
       page_storeage :['MainPage'],
       check_menu_bar : false,
-      
+
       main_page: <div>
       <div className="container">
         <MainHeader/>
-        
-        <MainContent 
+
+        <MainContent
         onChangePage = {function(next_page){
           var new_page_storeage = this.state.page_storeage.slice();
 
@@ -46,8 +50,8 @@ class App extends React.Component {
         <MainFooter/>
       </div>,
 
-      right_button:<RightButtons 
-      
+      right_button:<RightButtons
+
       onChangePage = {function(what_to_do){
         if(what_to_do === 'Home')
         {
@@ -63,12 +67,12 @@ class App extends React.Component {
           this.setState((prevState) => {
             var new_page_storeage = this.state.page_storeage;
             new_page_storeage.pop();
-           
+
             return {
               page_storeage : new_page_storeage,
               check_menu_bar : false
               }
-          });  
+          });
         }
         else if(what_to_do === 'Menu')
         {
@@ -81,9 +85,9 @@ class App extends React.Component {
         }
       }.bind(this)}
       />,
-      
+
       menu_bar:<MenuBar  onChangePage = {function(next_page){
-          
+
         var new_page_storeage = this.state.page_storeage.slice();
         if (new_page_storeage[new_page_storeage.length - 1] === next_page)//같은페이지로 가는걸 눌렀으면
         {
@@ -94,7 +98,7 @@ class App extends React.Component {
         else
         {
           new_page_storeage.push(next_page);
-         
+
           this.setState({
              page_storeage : new_page_storeage,
              check_menu_bar : false
@@ -113,7 +117,7 @@ class App extends React.Component {
   render(){
     var view_page,right_button = '',menu_bar = '';
     var now_page = this.state.page_storeage[this.state.page_storeage.length - 1 ];
-    
+
     if(now_page === 'MainPage')
     {
       view_page = this.state.main_page;
@@ -150,14 +154,18 @@ class App extends React.Component {
     {
       menu_bar = '';
     }
-
+    // Tranlate = {function(what_to_do){
     return(
+        <IntlProvider
+            locale="en"
+            messages={messages[this.state.greeting]}>
       <div>
         {view_page}
         {right_button}
         {menu_bar}
         {alert(this.state.page_storeage)}
       </div>
+        </IntlProvider>
   );
   }
 }

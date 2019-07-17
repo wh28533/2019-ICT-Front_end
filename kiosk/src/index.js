@@ -5,6 +5,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { addLocaleData } from "react-intl";
+import en from 'react-intl/locale-data/en';
+import ru from 'react-intl/locale-data/de';
+
+
+
+addLocaleData(en);
+addLocaleData(ru);
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

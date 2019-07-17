@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/Schedular.css';
 
@@ -107,19 +106,30 @@ class Schedule extends React.Component{
                                </div>
                            </li>
                            &nbsp; &nbsp;
-                           <li className="nav-item dropdown">
-                               <button type="button" className="btn-light nav-link dropdown-toggle button_deco" href='#'
-                                       id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                       aria-expanded="false">
-                                   <span className="button_text">Faculties</span></button>
-                               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                   <a className="dropdown-item" href="#"><span className="button_text">A</span></a>
-                                   <a className="dropdown-item" href="#"><span className="button_text">B</span></a>
-                                   <a className="dropdown-item" href="#"><span className="button_text">C</span></a>
-                                   <a className="dropdown-item" href="#"><span className="button_text">D</span></a>
-                                   <a className="dropdown-item" href="#"><span className="button_text">E</span></a>
+
+                           <div className="dropdown">
+                               <button className="dropbtn">Dropdown</button>
+                               <div className="dropdown-content">
+                                   <a href="#">Link 1</a>
+                                   <a href="#">Link 2</a>
+                                   <a href="#">Link 3</a>
                                </div>
-                           </li>
+                           </div>
+
+
+                           {/*<li className="nav-item dropdown">*/}
+                           {/*    <button type="button" className="btn-light nav-link dropdown-toggle button_deco" href='#'*/}
+                           {/*            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"*/}
+                           {/*            aria-expanded="false">*/}
+                           {/*        <span className="button_text">Faculties</span></button>*/}
+                           {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">*/}
+                           {/*        <a className="dropdown-item" href="#"><span className="button_text">A</span></a>*/}
+                           {/*        <a className="dropdown-item" href="#"><span className="button_text">B</span></a>*/}
+                           {/*        <a className="dropdown-item" href="#"><span className="button_text">C</span></a>*/}
+                           {/*        <a className="dropdown-item" href="#"><span className="button_text">D</span></a>*/}
+                           {/*        <a className="dropdown-item" href="#"><span className="button_text">E</span></a>*/}
+                           {/*    </div>*/}
+                           {/*</li>*/}
                            &nbsp; &nbsp;
                            <li className="nav-item dropdown">
                                <button type="button" className="btn-light nav-link dropdown-toggle button_deco" href='#'
