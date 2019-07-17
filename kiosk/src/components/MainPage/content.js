@@ -11,7 +11,11 @@ class content extends React.Component{
             <div className="col-lg-1">
             </div>
             <div className="col-lg-5">
-                <button type="button" className="btn-light main_buttons" href='#'>
+                <button type="button" className="btn-light main_buttons" onClick = {function(e){
+                    e.preventDefault();
+                    this.props.onChangePage("MapPage");
+
+                }.bind(this)}>
                     <div className="main_icons" align='left'>
                         <img className="media-object"src={require( '../.././assets/image/Asset 4.png')} alt="Map" width="20%"/>
                             <span className="main_text_in">Map</span>

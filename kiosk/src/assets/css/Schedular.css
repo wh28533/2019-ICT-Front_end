@@ -8,33 +8,6 @@
     font-size: 40pt;
 }
 
-#Home {
-    position: absolute;
-    right: 15.5%;
-    margin-top: 2%;
-    width: 5.5%;
-    height: auto;
-    margin-right: 2%
-}
-
-#Go_Back {
-    position: absolute;
-    right: 8%;
-    margin-top: 3%;
-    width: 6%;
-    height: auto;
-    margin-right: 2%
-}
-
-#Menu {
-    position: absolute;
-    right: 1%;
-    margin-top: 3%;
-    width: 6%;
-    height: auto;
-    margin-right: 1%
-}
-
 #Select {
     width: 80%;
     height: 10%;
@@ -52,7 +25,9 @@
     text-align: center;
 }
 
-table {
+.schedule_table {
+    table-layout: fixed;
+    word-break: break-all;
     width: 70%;
     position: absolute;
     left: 15%;
@@ -61,7 +36,7 @@ table {
     border-radius: 7px;
 }
 
-td {
+.schedule_td {
     width: 50px;
     height: 65px;
 }

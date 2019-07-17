@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FacultyFirst from './components/FacultyPage/FacultyFirst';
+import FacultySecond from './components/FacultyPage/FacutySecond';
 import MainHeader from './components/MainPage/MainHeader';
 import MainContent from './components/MainPage/content';
 import MainFooter from './components/MainPage/MainFooter';
@@ -9,6 +10,7 @@ import MenuBar from './components/RightButtons/MenuBar';
 import InfoPage from './components/InfoPage/InfoPage';
 import Shedule from './components/Schedule/Schedule';
 import Instituties from './components/Instituties/Instituties';
+import MapPage from './components/MapPage/MapPage';
 
 import './assets/css/bootstrap.css';
 import '../src/assets/css/MainPage.css';
@@ -52,8 +54,6 @@ class App extends React.Component {
         if(what_to_do === 'Home')
         {
           this.setState({
-            now_page : 'MainPage',
-
             page_storeage :['MainPage']
          });
 
@@ -104,11 +104,29 @@ class App extends React.Component {
       />,
 
       faculty_first: <FacultyFirst/>,
+      faculty_second: <FacultySecond/>,
+
       instituties: <Instituties/>,
 
       info_page:<InfoPage/>,
       shedule_page: <Shedule/>,
+      
+      map_page:<MapPage/>
     }
+  }
+  componentDidMount () {
+    const script1 = document.createElement("script");
+    const script2 = document.createElement("script");
+
+    script1.src = "http://code.jquery.com/jquery-latest.min.js";
+    script1.type = "text/javascript";
+    script1.async = true;
+
+    script2.src = "js/bootstrap.js";
+    script2.async = true;
+    
+    document.getElementById('root').appendChild(script1);
+    document.getElementById('root').appendChild(script2);
   }
   render(){
     var view_page,right_button = '',menu_bar = '';
@@ -127,6 +145,11 @@ class App extends React.Component {
       view_page = this.state.faculty_first;
       right_button = this.state.right_button;
     }
+    else if(now_page === 'FacultySecond')
+    {
+      view_page = this.state.faculty_second;
+      right_button = this.state.right_button;
+    }
     else if(now_page === 'Instituties')
     {
       view_page = this.state.instituties;
@@ -140,6 +163,11 @@ class App extends React.Component {
     else if (now_page === 'Schedule')
     {
       view_page = this.state.shedule_page;
+      right_button = this.state.right_button;
+    }
+    else if(now_page === 'MapPage')
+    {
+      view_page = this.state.map_page;
       right_button = this.state.right_button;
     }
     if(this.state.check_menu_bar === true)

@@ -1,8 +1,11 @@
 import React from 'react';
 
+import FacultySecond from './FacutySecond';
+
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/facultiefirst.css';
 import  axios from 'axios'
+
 
 class FacultyFirst extends React.Component{
     constructor(props) {
@@ -23,7 +26,6 @@ class FacultyFirst extends React.Component{
 
         }
 
-
     
     render(){
         return(
@@ -36,7 +38,7 @@ class FacultyFirst extends React.Component{
                         </button>
                     </div>)}
 
-                    </div>
+            </div>
     {/*<div>*/}
     {/*    <button align = 'center' class = "f1_buttons" type="button" href="#">*/}
     {/*        <pre>Faculty of Technology</pre>*/}

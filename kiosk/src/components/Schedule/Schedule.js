@@ -13,12 +13,9 @@ class Schedule extends React.Component{
         return (
            <div>
                <header><h1 id="Name">Schedule</h1>
-                {/*<a href='#'><img id="Home" src='./image/home.png' title='HOME'/></a>*/}
-                {/*<a href='#'><img id="Go_Back" src='./image/go_back.png' title='Go_Back'/></a>*/}
-                {/*<a href='#'><img id="Menu" src='./image/menu.png' title='MENU'/></a>*/}
                </header>
 
-               <table border="2">
+               <table border="2" className = "schedule_table">
                    <th>day<br/>time</th>
                    <th id="Time">Mon</th>
                    <th id="Time">Tue</th>
@@ -27,67 +24,67 @@ class Schedule extends React.Component{
                    <th id="Time">Fri</th>
                    <th id="Time">Sat</th>
                    <tr>
-                       <td id="Time">Time1</td>
-                       <td id="td"></td>
-                       <td id="td"></td>
-                       <td id="td"></td>
-                       <td id="td"></td>
-                       <td id="td"></td>
-                       <td id="td"></td>
+                       <td id="Time" className = "schedule_td">Time1</td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
                    </tr>
                    <tr>
-                       <td id="Time">Time2</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                       <td id="Time" className = "schedule_td">Time2</td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
                    </tr>
                    <tr>
-                       <td id="Time">Time3</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                       <td id="Time" className = "schedule_td">Time3</td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
                    </tr>
                    <tr>
-                       <td id="Time">Time4</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                       <td id="Time" className = "schedule_td">Time4</td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
                    </tr>
                    <tr>
-                       <td id="Time">Time5</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                       <td id="Time" className = "schedule_td">Time5</td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
                    </tr>
                    <tr>
-                       <td id="Time">Time6</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                       <td id="Time" className = "schedule_td">Time6</td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
                    </tr>
                    <tr>
-                       <td id="Time">Time7</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                       <td id="Time" className = "schedule_td">Time7</td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
+                       <td className = "schedule_td"></td>
                    </tr>
                </table>
 
