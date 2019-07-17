@@ -73,10 +73,14 @@ class content extends React.Component{
                 <div className="col-lg-1">
                 </div>
                 <div className="col-lg-5">
-                    <button type="button" className="btn-light main_buttons" href='#'>
+                    <button type="button" className="btn-light main_buttons" onClick = {function(e){
+                    e.preventDefault();
+                    this.props.onChangePage("UnivInfoPage");
+
+                }.bind(this)}>
                         <div className="main_icons" align='left'>
                             <img className="media-object" src={require( '../.././assets/image/Asset 3.png')} alt="History" width="20%"/>
-                                <span className="main_text_in">History</span>
+                                <span className="main_text_in">KSTU</span>
                         </div>
                     </button>
                 </div>

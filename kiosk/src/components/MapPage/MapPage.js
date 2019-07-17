@@ -9,23 +9,6 @@ class MapPage extends React.Component
     {
         super(props);
     }
-
-     jquery = window.jquery;
-     
-  componentDidMount () {
-    const script1 = document.createElement("script");
-    const script2 = document.createElement("script");
-
-    script1.src = "http://code.jquery.com/jquery-latest.min.js";
-    script1.type = "text/javascript";
-    script1.async = true;
-
-    script2.src = "js/bootstrap.js";
-    script2.async = true;
-    
-    document.getElementById('root').appendChild(script1);
-    document.getElementById('root').appendChild(script2);
-  }
     render(){
         return (
             <div>

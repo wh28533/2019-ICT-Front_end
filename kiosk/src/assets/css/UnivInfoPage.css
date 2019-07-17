@@ -1,0 +1,33 @@
+
+.header{
+    height:180px;
+    display:block
+    }
+                #Name{
+                    position: absolute;
+                    margin-top:3%;
+                    left:5%;
+                    color:white;
+                    font-size:40pt;
+                    }
+                #Table{
+                text-align: left;
+                color:white;
+                font-size: 20px;
+                }
+                #General{
+                position: absolute;
+                top:20%;
+                left:40%;
+                text-align: left;
+                color:white;
+                font-size: 100 pt;
+                font-size: 130%;
+                float:right;
+                width: 60%;
+    
+                }
+                #his_style{
+                    float: left;
+                    width: 30%;
+                }
