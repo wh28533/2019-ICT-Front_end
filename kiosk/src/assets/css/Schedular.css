@@ -11,11 +11,17 @@
     /*margin-right: 10%;*/
 
 }
+.DisplayBlock {
+    display: none;
+}
+.dropbtnGroup {
+  display: none;
+}
 .col-sm-3{
     margin-left: 0%;
 }
 .col-sm-9{
-    margin-right: -3%;
+    margin-right: 0%;
 }
 .dropdown {
     position: relative;
@@ -51,7 +57,7 @@
     display: block;
 }
 
-.dropdown:hover .dropbtn {
+.dropbtn:hover  {
     background-color: #3e8e41;
 }
 /************************************/
@@ -153,6 +159,57 @@
 
 
 
+/*********************************************************************************Teacher Schedule Menu Css**************************************************************/
+.dropbtnTecher {
+    background-color: #131f4e;
+    color: white;
+    padding: 12px;
+    /*position: relative;*/
+    font-size: 16px;
+    border: none;
+    /*cursor: pointer;*/
+    width: 80%;
+    margin-left: 20%;
+    /*margin-right: 10%;*/
+}
+.dropdivTecher{
+    margin-top: 10%;
+}
+
+.dropdown-TeacherFalNone {
+    display: none;
+    position: relative;
+}
+.dropdown-TeacherFal {
+    width: 100%;
+    /*margin-left: 20%;*/
+    /*margin-right: 10%;*/
+    display: block;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-TeacherFal  a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-TeacherFal  a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtnTecher:hover  {
+    background-color: #3e8e41;
+}
+
+
 
 
 
@@ -184,10 +241,11 @@
 .schedule_table {
     table-layout: fixed;
     word-break: break-all;
-    width: 70%;
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 0%;
+    height: 90%;
     position: absolute;
-    left: 15%;
-    top: 15%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 7px;
 }
