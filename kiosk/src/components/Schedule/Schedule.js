@@ -8,14 +8,18 @@ class Schedule extends React.Component{
     {
         super(props);
         this.state={
-            fal: false,
+            fal: true,
             Grade: false,
             Group: false,
             
     }
+
     }
     ChangeFalClassname(){
-        this.setState({fal: !this.state.fal})
+        this.setState({
+            fal: !this.state.fal,
+
+        })
 
     }
     ChangeGradClassname(){
@@ -27,39 +31,20 @@ class Schedule extends React.Component{
 
     }
     render() {
-        let style={
-            background:"yellow",
-        }
-        let style2={
-            background:"red",
-        }
 
 
-        let fal = this.state.fal ? "dropdown-fal" : "dropdown-fal-block";
-        let grade = this.state.Grade ? "dropdown-grade" : "dropdown-grade-block ";
-        let group = this.state.Group ? "dropdown-group" : "dropdown-group-block";
+
+        let fal = this.state.fal ? "dropdown-fal-block" : "dropdown-fal";
+        let grade = this.state.Grade ? "dropdown-grade-block" : "dropdown-grade ";
+        let group = this.state.Group ? "dropdown-group-block" : "dropdown-group";
         return (
            <div>
                <header><h1 className="Name"><FormattedMessage id="Schedule" defaultMassage="Schedule"/></h1>
                </header>
                <div className="row">
-                   <div className="col-sm-2" style={style}>
-
-                           {/*<li className="nav-item dropdown">*/}
-                           {/*    <button type="button" className="btn-light nav-link dropdown-toggle button_deco" href='#'*/}
-                           {/*            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"*/}
-                           {/*            aria-expanded="false">*/}
-                           {/*        <span className="button_text">Grade</span></button>*/}
-                           {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">1st</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">2nd</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">3rd</span></a>*/}
-
-                           {/*    </div>*/}
-                           {/*</li>*/}
-                           {/*&nbsp; &nbsp;*/}
-                           <div className="dropdown" onClick={this.ChangeFalClassname.bind(this)}>
-                               <button className="dropbtn" ><FormattedMessage id="SFaculty" defaultMassage=" Faculties"/></button>
+                   <div className="col-sm-2">
+                           <div className="dropdown" >
+                               <button className="dropbtn" onClick={this.ChangeFalClassname.bind(this)} ><FormattedMessage id="SFaculty" defaultMassage="Faculties"/>{}</button>
                                <div className={fal}>
                                    <a href="#">1</a>
                                    <a href="#"> 2</a>
@@ -133,7 +118,7 @@ class Schedule extends React.Component{
 
 
                    </div>
-                   <div className="col-sm-10" style={style2}>
+                   <div className="col-sm-10" >
                        <table border="2" className = "schedule_table">
                            <th ><span id="day"><FormattedMessage id="day" defaultMassage="day"/></span><br/>
                                <span id="day"><FormattedMessage id="time" defaultMassage="time"/></span></th>

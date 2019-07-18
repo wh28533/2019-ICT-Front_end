@@ -1,5 +1,5 @@
 .dropbtn {
-    background-color: #09014e;
+    background-color: #131f4e;
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -8,11 +8,12 @@
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+
 }
 
 .dropdown {
-    position: absolute;
-    display: inline-block;
+    position: relative;
+    display: block;
 }
 
 .dropdown-fal {
@@ -20,7 +21,10 @@
     position: relative;
 }
 .dropdown-fal-block {
-    display: none;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -51,8 +55,11 @@
 }
 
 .dropdown-grade-block {
-    display: none;
-    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -75,8 +82,11 @@
 }
 
 .dropdown-group-block {
-    display: none;
-    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -92,7 +102,7 @@
 }
 
 .dropdown-group-block  a:hover {background-color: #f1f1f1}
-
+/*************************************************************************************************************/
 .Name {
     position: absolute;
     margin-top: 3%;
