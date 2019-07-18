@@ -14,7 +14,15 @@ export default {
         "Grade":"Grade",
         "SFaculty":"Faculty",
         "Instituties":"Instituties",
-        "Information":"Information"
+        "Information":"Information",
+        // /*****************************Main Page********************************************/
+        "InformationinMenu":"Information",
+        "KSTUinMenu":"KSTU",
+        "InstitutesinMenu":"Institutes",
+        "FacultiesinMenu":"Faculties",
+        "ScheduleinMenu":"Schedule",
+        "MapinMenu":"Map",
+        // /******************************/Main Page*******************************************/
 
 
     },
@@ -32,7 +40,15 @@ export default {
         "Grade":"Кафедра",
         "SFaculty":"Факультет",
         "Instituties":"Институты",
-        "Information":"Информация"
+        "Information":"Информация",
+        // /*****************************Main Page********************************************/
+        "InformationinMenu":"Информации",
+        "KSTUinMenu":"КГТУ",
+        "InstitutesinMenu":"Институты",
+        "FacultiesinMenu":"Факультеты",
+        "ScheduleinMenu":"Расписание",
+        "MapinMenu":"Карта",
+        // /******************************/Main Page*******************************************/
 
     },
     kg:{
@@ -49,7 +65,16 @@ export default {
         "Grade":"Болуму",
         "SFaculty":"Факультети",
         "Instituties":"Институту",
-        "Information":"Маалымат"
+        "Information":"Маалымат",
+        // /*****************************Main Page********************************************/
+        "InformationinMenu":"Маалымат",
+        "KSTUinMenu":"КМТУ",
+        "InstitutesinMenu":"Институты",
+        "FacultiesinMenu":"Факульттер",
+        "ScheduleinMenu":"вв",
+        "MapinMenu":"Картасы",
+        // /******************************/Main Page*******************************************/
+
 
 
     },

@@ -14,7 +14,9 @@ class MapPage extends React.Component
         return (
             <div>
                 <h1 id="Name"><FormattedMessage id="Name" defaultMassage="Map"/></h1>
-        <div id="Box">
+                <div id="Box">
+
+                    
         <img id="Map" src= {require('../.././assets/image/map_image/whole_campus.png')} />
         </div>
 

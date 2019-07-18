@@ -27,7 +27,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      greeting: "ru",
+      lan: "en",
       page_storeage :['MainPage'],
       check_menu_bar : false,
 
@@ -48,7 +48,14 @@ class App extends React.Component {
         }.bind(this)}
         />
       </div>
-        <MainFooter/>
+        <MainFooter
+            onChangePage = {function(change_lan){
+              this.setState({
+
+                lan : change_lan
+              });
+        }.bind(this)}
+              />
       </div>,
 
       right_button:<RightButtons
@@ -177,7 +184,7 @@ class App extends React.Component {
     return(
         <IntlProvider
             locale="en"
-            messages={messages[this.state.greeting]}>
+            messages={messages[this.state.lan]}>
       <div>
         {view_page}
         {right_button}
