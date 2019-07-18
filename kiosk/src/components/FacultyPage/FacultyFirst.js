@@ -1,8 +1,12 @@
 import React from 'react';
 
+import FacultySecond from './FacutySecond';
+
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/facultiefirst.css';
 import  axios from 'axios'
+import {FormattedMessage} from "react-intl";
+
 
 class FacultyFirst extends React.Component{
     constructor(props) {
@@ -17,18 +21,17 @@ class FacultyFirst extends React.Component{
             axios.get('https://e-kundoluk-flask-server.herokuapp.com/api/timetable/klass/'+id).
                 then(res=>{
                     const faculty=res.data;
-                    console.log(res.data)
+                    console.log(res.data);
                     this.setState({faculty})
             })
 
         }
 
-
     
     render(){
         return(
             <div>
-                <h1 id = 'Name'>Faculties</h1>
+                <h1 className= "Name"><FormattedMessage id="Faculties" defaultMassage="Faculties"/></h1>
                     <div id = "f1_button_pos">
                     { this.state.faculty.map(faculty => <div>
                         <button align='center' className="f1_buttons" type="button" href="#">
@@ -36,7 +39,7 @@ class FacultyFirst extends React.Component{
                         </button>
                     </div>)}
 
-                    </div>
+            </div>
     {/*<div>*/}
     {/*    <button align = 'center' class = "f1_buttons" type="button" href="#">*/}
     {/*        <pre>Faculty of Technology</pre>*/}

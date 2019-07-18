@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FacultyFirst from './components/FacultyPage/FacultyFirst';
+import FacultySecond from './components/FacultyPage/FacutySecond';
 import MainHeader from './components/MainPage/MainHeader';
 import MainContent from './components/MainPage/content';
 import MainFooter from './components/MainPage/MainFooter';
@@ -9,6 +10,8 @@ import MenuBar from './components/RightButtons/MenuBar';
 import InfoPage from './components/InfoPage/InfoPage';
 import Shedule from './components/Schedule/Schedule';
 import Instituties from './components/Instituties/Instituties';
+import MapPage from './components/MapPage/MapPage';
+import UnivInfoPage from './components/UnivInfo/UnivInfoPage';
 
 import {IntlProvider} from "react-intl";
 import messages from "./Translations/Tranlatetions";
@@ -17,8 +20,6 @@ import '../src/assets/css/MainPage.css';
 
 
 import './App.css';
-// import { bindExpression } from '@babel/types';
-
 class App extends React.Component {
 
   constructor(props)
@@ -56,8 +57,6 @@ class App extends React.Component {
         if(what_to_do === 'Home')
         {
           this.setState({
-            now_page : 'MainPage',
-
             page_storeage :['MainPage']
          });
 
@@ -108,10 +107,15 @@ class App extends React.Component {
       />,
 
       faculty_first: <FacultyFirst/>,
+      faculty_second: <FacultySecond/>,
+
       instituties: <Instituties/>,
 
       info_page:<InfoPage/>,
       shedule_page: <Shedule/>,
+      
+      univinfo_page:<UnivInfoPage/>,
+      map_page:<MapPage/>
     }
   }
   render(){
@@ -131,6 +135,11 @@ class App extends React.Component {
       view_page = this.state.faculty_first;
       right_button = this.state.right_button;
     }
+    else if(now_page === 'FacultySecond')
+    {
+      view_page = this.state.faculty_second;
+      right_button = this.state.right_button;
+    }
     else if(now_page === 'Instituties')
     {
       view_page = this.state.instituties;
@@ -144,6 +153,16 @@ class App extends React.Component {
     else if (now_page === 'Schedule')
     {
       view_page = this.state.shedule_page;
+      right_button = this.state.right_button;
+    }
+    else if(now_page === 'MapPage')
+    {
+      view_page = this.state.map_page;
+      right_button = this.state.right_button;
+    }
+    else if(now_page === 'UnivInfoPage')
+    {
+      view_page = this.state.univinfo_page;
       right_button = this.state.right_button;
     }
     if(this.state.check_menu_bar === true)

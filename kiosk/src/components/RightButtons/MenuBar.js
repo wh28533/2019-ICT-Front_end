@@ -24,7 +24,7 @@ class MenuBar extends React.Component {
                 </button>
             <button onClick = {function(e){
                     e.preventDefault();
-                    this.props.onChangePage("SchedulePage");
+                    this.props.onChangePage("Schedule");
                     
                 }.bind(this)}>
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/schedule.png")} alt = "Schedule"/>
@@ -38,7 +38,12 @@ class MenuBar extends React.Component {
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/faculties.png")} alt = "Faculties"/>
                 <br/>Faculties
             </button>
-            <button>
+            <button onClick = {function(e){
+                    e.preventDefault();
+                    this.props.onChangePage("Institutes");
+                    
+                }.bind(this)}>
+
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/institutes.png")} alt = "Institutes"/>
                 <br/>Institutes
             </button>

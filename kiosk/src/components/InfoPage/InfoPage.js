@@ -2,17 +2,19 @@ import React from 'react';
 
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/Info.css';
+import {FormattedMessage} from "react-intl";
 
 class InfoPage extends React.Component{
     constructor(props)
     {
+
         super(props);
     }
 
     render(){
         return(
             <div>
-            <h1 id = 'Name'>Information</h1>
+            <h1 className='Name'>Information<FormattedMessage id="Information" defaultMassage="Information"/></h1>
             <table className = "info_table_position">
             <tr>
                 <th>

@@ -3,6 +3,7 @@ import React from 'react';
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/facultiefirst.css';
 import  axios from 'axios'
+import {FormattedMessage} from "react-intl";
 
 class Instituties extends React.Component{
     constructor(props) {
@@ -19,7 +20,6 @@ class Instituties extends React.Component{
             const institut=res.data;
             console.log(res.data)
             this.setState({institut})
-
         })
 
     }
@@ -29,7 +29,7 @@ class Instituties extends React.Component{
     render(){
         return(
             <div>
-                <h1 id = 'Name'> Instituties</h1>
+                <h1 className='Name'> <FormattedMessage id="Instituties" defaultMassage="Instituties"/></h1>
                 <div id = "f1_button_pos">
                     { this.state.institut.map(institut => <div>
                         <button align='center' className="f1_buttons" type="button" href="#">
