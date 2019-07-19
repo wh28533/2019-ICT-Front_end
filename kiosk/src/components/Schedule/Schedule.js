@@ -3,7 +3,6 @@ import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/Schedular.css';
 import {FormattedMessage} from "react-intl";
 
-import ProfessorList from './ProfessorList';
 class Schedule extends React.Component{
     constructor(props) {
         super(props);
@@ -22,15 +21,7 @@ class Schedule extends React.Component{
             TeacherFal: false,
             TeacherSubmit:false,
             StudentSubmit:false,
-            
-            professor_list_check : true,
-        
-            professor_list : <ProfessorList onChangePage = { function(){// to show Professer list or not
-                this.setState({
-                    professor_list_check : false
-                });
-      
-              }.bind(this)}/>
+
         }
     }
         //*************************************************Student's Schedule Menu Functions******************************************************************************
@@ -89,10 +80,7 @@ class Schedule extends React.Component{
 
         }
     render() {
-        let view_profe_list = this.state.professor_list_check ? this.state.professor_list : '';
         //******************************************Student scheduler Menu Change Css Class*********************************************************************************
-        
-
         let StudentButtons = this.state.StudentButtons ?   "DisplayBlock" : "dropdown";
         let dropdivTecher=this.state.TeacherMenuNone ?   "DisplayBlock" : "dropdivTecher";
         let GradeButtonNone = this.state.GradeButtonNone ?   "DisplayBlock" : "dropdown";
@@ -101,7 +89,7 @@ class Schedule extends React.Component{
         let grade = this.state.Grade ? "dropdown-grade-block" : "dropdown-grade ";
         let group = this.state.Group ? "dropdown-group-block" : "dropdown-group";
         let StudentSubmit = this.state.StudentSubmit?"StudentSubmit":"DisplayBlock"
-        
+
 
         //******************************************Teacher scheduler Menu Change Css Class*********************************************************************************
         let TeacherButtons = this.state.TeacherButtons ?   "DisplayBlock" : "dropdown";
@@ -261,7 +249,7 @@ class Schedule extends React.Component{
                </div>
 
 
-            {view_profe_list}
+
 
            </div>
 
