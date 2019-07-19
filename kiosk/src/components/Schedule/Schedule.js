@@ -15,7 +15,7 @@ class Schedule extends React.Component{
             Group: false,
             professor_list_check : true,
         
-            professor_list : <ProfessorList onChangePage = { function(){ // 교수목록 보이게 하거나 안보이게 하는것 // to show Professer list or not
+            professor_list : <ProfessorList onChangePage = { function(){// to show Professer list or not
                 this.setState({
                     professor_list_check : false
                 });
@@ -31,14 +31,18 @@ class Schedule extends React.Component{
             fal: !this.state.fal,
         });
     }
+    
     ChangeGradClassname(){
         this.setState({Grade: !this.state.Grade})
 
     }
+    
     ChangeGroupClassname(){
         this.setState({Group: !this.state.Group})
 
     }
+
+    
     render() {
         let view_profe_list = this.state.professor_list_check ? this.state.professor_list : '';
         
