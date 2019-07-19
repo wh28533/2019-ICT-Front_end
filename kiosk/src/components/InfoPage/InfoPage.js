@@ -14,7 +14,7 @@ class InfoPage extends React.Component{
     render(){
         return(
             <div>
-            <h1 className='Name'>Information<FormattedMessage id="Information" defaultMassage="Information"/></h1>
+            <h1 className='Name'><FormattedMessage id="Information" defaultMassage="Information"/></h1>
             <table className = "info_table_position">
             <tr>
                 <th>
@@ -22,7 +22,8 @@ class InfoPage extends React.Component{
                 </th>
                 <th>
                     <pre className = "info_paragraph">
-                       Slect a section and tap on it.<br/>
+                        <FormattedMessage id="info_paragraph" defaultMassage="Information"/>
+                       Select a section and tap on it.<br/>
                        On the home page you can<br/>
                        change the language of the<br/>
                        proposed information. For that<br/>
