@@ -153,8 +153,22 @@
     text-decoration: none;
     display: block;
 }
-
-
+.StudentSubmit{
+    margin-top: 20px;
+    background-color: #131f4e;
+    color: white;
+    padding: 12px;
+    /*position: relative;*/
+    font-size: 16px;
+    border: none;
+    /*cursor: pointer;*/
+    width: 80%;
+    margin-left: 20%;
+    /*margin-right: 10%;*/
+}
+.StudentSubmit:hover{
+    background-color: #3e8e41;
+}
 
 
 
@@ -181,8 +195,8 @@
     position: relative;
 }
 .dropdown-TeacherFal {
-    width: 100%;
-    /*margin-left: 20%;*/
+    width: 80%;
+    margin-left: 20%;
     /*margin-right: 10%;*/
     display: block;
     position: relative;
@@ -208,8 +222,24 @@
 .dropbtnTecher:hover  {
     background-color: #3e8e41;
 }
+.TeacherSubmit{
+    margin-top: 20px;
+    background-color: #131f4e;
+    color: white;
+    padding: 12px;
+    /*position: relative;*/
+    font-size: 16px;
+    border: none;
+    /*cursor: pointer;*/
+    width: 80%;
+    margin-left: 20%;
+    /*margin-right: 10%;*/
+}
+.TeacherSubmit:hover{
+    background-color: #3e8e41;
+}
 
-
+/*/*****************************************************************************************************************************/
 
 
 

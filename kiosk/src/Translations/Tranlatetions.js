@@ -22,7 +22,18 @@ export default {
         "FacultiesinMenu":"Faculties",
         "ScheduleinMenu":"Schedule",
         "MapinMenu":"Map",
-        // /******************************/Main Page*******************************************/
+        // /******************************Schdule Menu*******************************************/
+        "Studen's Scheduler Menu Title":"student schedule",
+        "ShelMenuFaculty":"Falculty",
+        "ShelMenuGrade":"Grade",
+        "ShelMenuGroup":"Group",
+        "StudentSubmit":"View schedule",
+
+        "Teacher's Scheduler Menu Title":"Teacher Schedule",
+        "TeacherSubmit":"View schedule"
+
+        // /*******************************************************************************/
+
 
 
     },
@@ -49,6 +60,17 @@ export default {
         "ScheduleinMenu":"Расписание",
         "MapinMenu":"Карта",
         // /******************************/Main Page*******************************************/
+        // /******************************Schdule Menu*******************************************/
+        "Studen's Scheduler Menu Title":"расписание студентов",
+        "ShelMenuFaculty":"Факультет",
+        "ShelMenuGrade":"Курс",
+        "ShelMenuGroup":"группа",
+        "StudentSubmit":"Посмотреть расписание",
+
+
+        "Teacher's Scheduler Menu Title":"расписание учителей",
+        "TeacherSubmit":"Посмотреть расписание"
+        // /*******************************************************************************/
 
     },
     kg:{
@@ -69,12 +91,21 @@ export default {
         // /*****************************Main Page********************************************/
         "InformationinMenu":"Маалымат",
         "KSTUinMenu":"КМТУ",
-        "InstitutesinMenu":"Институты",
-        "FacultiesinMenu":"Факульттер",
+        "InstitutesinMenu":"Институттары",
+        "FacultiesinMenu":"Факульттери",
         "ScheduleinMenu":"вв",
         "MapinMenu":"Картасы",
         // /******************************/Main Page*******************************************/
+        // /******************************Schdule Menu*******************************************/
+        "Studen's Scheduler Menu Title":"Студенттин расписаниеси",
+        "ShelMenuFaculty":"Факультети",
+        "ShelMenuGrade":"Курсу",
+        "ShelMenuGroup":"Группасы",
+        "StudentSubmit":"Расписаниени коруу",
 
+        "Teacher's Scheduler Menu Title":"Мугалимдин расписаниеси ",
+        "TeacherSubmit":"Расписаниени коруу"
+        // /*******************************************************************************/
 
 
     },
