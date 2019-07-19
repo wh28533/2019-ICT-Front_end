@@ -3,7 +3,7 @@ export default {
     en:{
         "Welcome to KSTU":"Welcome to KSTU",
         "named after I.Razzakov":"Kyrgyz State Technical University named after I.Razzakov",
-        "Name":"Map",
+        "Map":"Map",
         "Building_Number":"Building Number",
         "Floor_Number":"Floor Number",
         "Faculties":"Faculties",
@@ -22,7 +22,21 @@ export default {
         "FacultiesinMenu":"Faculties",
         "ScheduleinMenu":"Schedule",
         "MapinMenu":"Map",
-        // /******************************/Main Page*******************************************/
+        // /******************************Schdule Menu*******************************************/
+        "Studen's Scheduler Menu Title":"student schedule",
+        "ShelMenuFaculty":"Falculty",
+        "ShelMenuGrade":"Grade",
+        "ShelMenuGroup":"Group",
+        "StudentSubmit":"View schedule",
+
+        "Teacher's Scheduler Menu Title":"Teacher Schedule",
+        "TeacherSubmit":"View schedule",
+
+        // /*********************************Map Menu**********************************************/
+        "Building Number":"Building Number",
+        "Floor Number":"Floor Number",
+        "MapSubmit":"View Map"
+
 
 
     },
@@ -49,6 +63,22 @@ export default {
         "ScheduleinMenu":"Расписание",
         "MapinMenu":"Карта",
         // /******************************/Main Page*******************************************/
+        // /******************************Schdule Menu*******************************************/
+        "Studen's Scheduler Menu Title":"расписание студентов",
+        "ShelMenuFaculty":"Факультет",
+        "ShelMenuGrade":"Курс",
+        "ShelMenuGroup":"группа",
+        "StudentSubmit":"Посмотреть расписание",
+
+
+        "Teacher's Scheduler Menu Title":"расписание учителей",
+        "TeacherSubmit":"Посмотреть расписание",
+
+        // /*********************************Map Menu**********************************************/
+        "Building Number":"Номер здания",
+        "Floor Number":"Номер этажа",
+        "MapSubmit":"Посмотреть карту"
+
 
     },
     kg:{
@@ -69,11 +99,24 @@ export default {
         // /*****************************Main Page********************************************/
         "InformationinMenu":"Маалымат",
         "KSTUinMenu":"КМТУ",
-        "InstitutesinMenu":"Институты",
-        "FacultiesinMenu":"Факульттер",
+        "InstitutesinMenu":"Институттары",
+        "FacultiesinMenu":"Факульттери",
         "ScheduleinMenu":"вв",
         "MapinMenu":"Картасы",
         // /******************************/Main Page*******************************************/
+        // /******************************Schdule Menu*******************************************/
+        "Studen's Scheduler Menu Title":"Студенттин расписаниеси",
+        "ShelMenuFaculty":"Факультети",
+        "ShelMenuGrade":"Курсу",
+        "ShelMenuGroup":"Группасы",
+        "StudentSubmit":"Расписаниени коруу",
+
+        "Teacher's Scheduler Menu Title":"Мугалимдин расписаниеси ",
+        "TeacherSubmit":"Расписаниени коруу",
+        // /*********************************Map Menu**********************************************/
+        "Building Number":"Имараттын номери",
+        "Floor Number":"Кабаттын номери",
+        "MapSubmit":"Картасын коруу"
 
 
 
