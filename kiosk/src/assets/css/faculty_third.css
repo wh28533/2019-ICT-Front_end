@@ -1,0 +1,96 @@
+
+#f3_Name {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    color: white;
+    font-size: 40pt;
+}
+
+#f3_List_Pos{
+    position: absolute;
+    top: 24%;
+    left: 32.3%;
+    z-index: 1;
+    width: 35%;
+    height: 5%;
+}
+
+.f3_Teacher_Name_Card{
+    width: 80%;
+    height: 3%;
+    border-radius: 12px;
+    margin-top: 3%;
+    text-align: center;
+    color: black;
+    background-color: rgba(180, 238, 248, 0.8);
+ 
+}
+.f3_Teacher_photo{
+    width: 60%;
+    height: 35%;
+    z-index: 2;
+}
+
+#f3_Teacher_prev{
+    position: absolute;
+    top: 51%;
+    left: 28%;
+    z-index: 2;
+    width: 3%;
+    height: auto;
+}
+#f3_Teacher_next{
+    position: absolute;
+    top: 51%;
+    right: 28.5%;
+    z-index: 2;
+    width: 3%;
+    height: auto;
+}
+#f3_Teacher_page_num{
+    position: absolute;
+    top: 84%;
+    left: 47.8%;
+    color: black;
+    font-size: 180%;
+    z-index: 2;
+    font:bold;
+}
+#f3_Teacher_cancel{
+    position: absolute;
+    top: 22.8%;
+    right: 27%;
+    width: 1%;
+    z-index: 2;
+    height: auto;
+}
+
+#f3_Department_Intro{
+    table-layout: fixed;
+    word-break: break-all;
+    background-color: rgba(176, 230, 218, 0.7);
+    
+    width: 40%;
+    height: 15%;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 2;
+    top: 6%;
+    right: 30%;
+    color: black;
+    font-size: 120%;
+}
+
+#f3_New_screen_for_department
+{
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 24.6%;
+    background-color: white;
+    width: 50%;
+    height: 69%;
+    border-radius: 12px;
+    
+}

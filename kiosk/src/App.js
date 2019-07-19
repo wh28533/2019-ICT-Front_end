@@ -113,7 +113,17 @@ class App extends React.Component {
       }.bind(this)}
       />,
 
-      faculty_first: <FacultyFirst/>,
+      faculty_first: <FacultyFirst onChangePage = {function(new_faculty_id){
+        var new_page_storeage = this.state.page_storeage.slice();
+        new_page_storeage.push('FacultySecond');
+        this.setState({
+         page_storeage : new_page_storeage,
+         faculty_second : <FacultySecond faculty_id = {new_faculty_id}/>
+        
+        });
+
+    }.bind(this)}/>,
+
       faculty_second: <FacultySecond/>,
 
       instituties: <Instituties/>,
@@ -123,6 +133,7 @@ class App extends React.Component {
       
       univinfo_page:<UnivInfoPage/>,
       map_page:<MapPage/>
+    
     }
   }
   render(){

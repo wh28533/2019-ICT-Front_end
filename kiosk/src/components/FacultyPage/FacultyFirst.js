@@ -1,6 +1,5 @@
 import React from 'react';
 
-import FacultySecond from './FacutySecond';
 
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/facultiefirst.css';
@@ -15,16 +14,18 @@ class FacultyFirst extends React.Component{
             faculty: []
         }
     }
+    
         componentDidMount()
         {
-            let id ='1';
-            axios.get('https://e-kundoluk-flask-server.herokuapp.com/api/timetable/klass/'+id).
-                then(res=>{
-                    const faculty=res.data;
-                    console.log(res.data);
-                    this.setState({faculty})
-            })
 
+                axios.get('http://192.168.1.122:8000/faculty/').
+                then(res=>{
+                    const faculty_load=res.data;
+                  //  console.log(res.data);
+                    this.setState({
+                        faculty: faculty_load
+                    });
+            });
         }
 
     
@@ -34,43 +35,17 @@ class FacultyFirst extends React.Component{
                 <h1 className= "Name"><FormattedMessage id="Faculties" defaultMassage="Faculties"/></h1>
                     <div id = "f1_button_pos">
                     { this.state.faculty.map(faculty => <div>
-                        <button align='center' className="f1_buttons" type="button" href="#">
-                            <pre>{faculty.lesson_name}</pre>
+                        <button align='center' className="f1_buttons" type="button" onClick = {function(e){
+                            e.preventDefault();
+                            alert(faculty.id);
+                          this.props.onChangePage(faculty.id);
+                        }.bind(this)} >
+                            <pre>{faculty.name}</pre>
                         </button>
                     </div>)}
-
             </div>
-    {/*<div>*/}
-    {/*    <button align = 'center' class = "f1_buttons" type="button" href="#">*/}
-    {/*        <pre>Faculty of Technology</pre>*/}
-    {/*    </button>*/}
-    {/*</div>*/}
-    {/*<div>*/}
-    {/*    <button align = 'center' class = "f1_buttons" type="button" href="#">*/}
-    {/*        <pre>Faculty of Information Technology</pre>*/}
-    {/*    </button>*/}
-    {/*</div>*/}
-    {/*<div>*/}
-    {/*    <button align = 'center' class = "f1_buttons" type="button" href="#">*/}
-    {/*        <pre>Faculty of Transport and Engineering</pre>*/}
-    {/*    </button>*/}
-    {/*</div>    */}
-    {/*<div>*/}
-    {/*   <button align = 'center' class = "f1_buttons" type="button" href="#">*/}
-    {/*        <pre>Faculty of Energy</pre>*/}
-    {/*    </button> */}
-    {/*</div>*/}
-    {/*<div>*/}
-    {/*    <button align = 'center'class = "f1_buttons" type="button" href="#">*/}
-    {/*        <pre>Faculty of Engineering and Economics</pre>*/}
-    {/*    </button>*/}
-    {/*</div>*/}
-    {/*<div>*/}
-    {/*    <button align = 'center' class = "f1_buttons" type="button" href="#">*/}
-    {/*        <pre>High school of master degree</pre>*/}
-    {/*    </button>*/}
-    {/*</div>*/}
-</div>
+    
+        </div>
 
         );
     }

@@ -3,6 +3,8 @@ import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/Schedular.css';
 import {FormattedMessage} from "react-intl";
 
+import ProfessorList from './ProfessorList';
+
 class Schedule extends React.Component{
     constructor(props)
     {
@@ -11,16 +13,23 @@ class Schedule extends React.Component{
             fal: true,
             Grade: false,
             Group: false,
-            
-    }
+            professor_list_check : true,
+        
+            professor_list : <ProfessorList onChangePage = { function(){ // 교수목록 보이게 하거나 안보이게 하는것 // to show Professer list or not
+                this.setState({
+                    professor_list_check : false
+                });
+      
+              }.bind(this)}
+              />
+        }
 
     }
+
     ChangeFalClassname(){
         this.setState({
             fal: !this.state.fal,
-
-        })
-
+        });
     }
     ChangeGradClassname(){
         this.setState({Grade: !this.state.Grade})
@@ -31,12 +40,13 @@ class Schedule extends React.Component{
 
     }
     render() {
-
-
-
+        let view_profe_list = this.state.professor_list_check ? this.state.professor_list : '';
+        
         let fal = this.state.fal ? "dropdown-fal-block" : "dropdown-fal";
         let grade = this.state.Grade ? "dropdown-grade-block" : "dropdown-grade ";
         let group = this.state.Group ? "dropdown-group-block" : "dropdown-group";
+        
+        
         return (
            <div>
                <header><h1 className="Name"><FormattedMessage id="Schedule" defaultMassage="Schedule"/></h1>
@@ -73,50 +83,6 @@ class Schedule extends React.Component{
                            </div>
 
 
-                           {/*<li className="nav-item dropdown">*/}
-                           {/*    <button type="button" className="btn-light nav-link dropdown-toggle button_deco" href='#'*/}
-                           {/*            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"*/}
-                           {/*            aria-expanded="false">*/}
-                           {/*        <span className="button_text">Faculties</span></button>*/}
-                           {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">A</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">B</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">C</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">D</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span className="button_text">E</span></a>*/}
-                           {/*    </div>*/}
-                           {/*</li>*/}
-                           {/*&nbsp; &nbsp;*/}
-                           {/*<li className="nav-item dropdown">*/}
-                           {/*    <button type="button" className="btn-light nav-link dropdown-toggle button_deco" href='#'*/}
-                           {/*            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"*/}
-                           {/*            aria-expanded="false">*/}
-                           {/*        <span className="button_text">Group</span></button>*/}
-                           {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">*/}
-                           {/*        <a className="dropdown-item" href="#"><span*/}
-                           {/*            className="button_text">A_class</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span*/}
-                           {/*            className="button_text">B_class</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span*/}
-                           {/*            className="button_text">C_class</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span*/}
-                           {/*            className="button_text">D_class</span></a>*/}
-                           {/*        <a className="dropdown-item" href="#"><span*/}
-                           {/*            className="button_text">E_class</span></a>*/}
-                           {/*    </div>*/}
-                           {/*</li>*/}
-                           &nbsp; &nbsp; &nbsp; &nbsp;
-                           {/*<li>*/}
-                           {/*    <form action="#" accept-charset="utf-8" name="info" method="get">*/}
-
-                           {/*        <input type="submit" value="choose" className="btn-light button_deco button_text"*/}
-                           {/*               href='#'/>*/}
-
-                           {/*    </form>*/}
-                           {/*</li>*/}
-
-
-
                    </div>
                    <div className="col-sm-10" >
                        <table border="2" className = "schedule_table">
@@ -130,10 +96,10 @@ class Schedule extends React.Component{
                            <th id="Time">Sat</th>
                            <tr>
                                <td id="Time" className = "schedule_td">Time1</td>
-                               <td className = "schedule_td"></td>
-                               <td className = "schedule_td"></td>
-                               <td className = "schedule_td"></td>
-                               <td className = "schedule_td"></td>
+                               <td className = "schedule_td">1</td>
+                               <td className = "schedule_td">2</td>
+                               <td className = "schedule_td">3</td>
+                               <td className = "schedule_td">4</td>
                                <td className = "schedule_td"></td>
                                <td className = "schedule_td"></td>
                            </tr>
@@ -197,6 +163,7 @@ class Schedule extends React.Component{
 
 
 
+            {view_profe_list}
 
            </div>
 

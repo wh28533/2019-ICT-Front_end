@@ -4,66 +4,128 @@ import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/faculty_second.css';
 import  axios from 'axios';
 
+import FacultyThird from './FacultyThird';
+
 class FacultySecond extends React.Component{
     constructor(props) {
+        
         super(props);
+        this.state = {
+            faculty_id: this.props.faculty_id,
+            faculties:[],
+            departments : [],
+            faculty_info:[],
+            
+            check_faculy_thired : false,
+            faculy_third: <FacultyThird onChangePage = {function(){
+                this.setState({
+                    check_faculy_thired:false
+                });
+
+            }.bind(this)}
+            />
+        };
+    }
+    componentDidMount(id)
+    {
+        if(id === undefined)
+        {
+            id = this.state.faculty_id;
+        }
+        
+        axios.get('http://192.168.1.122:8000/faculty/').
+        then(res=>{
+            const faculty_load=res.data;
+           // console.log(res.data);
+            this.setState({
+                faculties: faculty_load
+            });
+        });
+        axios.get('http://192.168.1.122:8000/faculty/'+id).
+        then(res=>{
+            const departments_load=res.data.departments_of_faculty;
+            const faculty_load=res.data.about;
+           // console.log(res.data);
+            this.setState({
+                departments: departments_load,
+                fauculty_info: faculty_load
+            });
+        });
     }
     
+    change_f_id = (id)=>{
+        this.setState({
+            faculty_id : id
+        });
+    }
+    set_css_name = (id)=>{
+        if(id === this.state.faculty_id) {
+            return "f2_buttons";
+        }
+        else{
+            return "f2_buttons f2_not";
+        }
+    }
     render(){
-        return(
-            <div>
-                 <h1 id = 'Name'>Departments</h1>
+        
+        var view_faculties,view_departments , view_faculty_third;
+        view_faculties = 
         <div id = "f2_button_pos">
-            <div>
-                <button align = 'center' className = "f2_buttons" type="button">
-                    <pre>Faculty of Technology</pre>
-                </button>
-            </div>
-            <div>
-                <button align = 'center' className = "f2_buttons f2_not" type="button">
-                    <pre>Faculty of Information Technology</pre>
-                </button>
-            </div>
-            <div>
-                <button align = 'center' className = "f2_buttons f2_not" type="button">
-                    <pre>Faculty of Transport and Engineering</pre>
-                </button>
-            </div>    
-            <div>
-               <button align = 'center' className = "f2_buttons f2_not" type="button">
-                    <pre>Faculty of Energy</pre>
-                </button> 
-            </div>
-            <div>
-                <button align = 'center'className = "f2_buttons f2_not" type="button">
-                    <pre>Faculty of Engineering and Economics</pre>
-                </button>
-            </div>
-            <div>
-                <button align = 'center' className = "f2_buttons f2_not" type="button">
-                    <pre>High school of master degree</pre>
-                </button>
-            </div>
-        </div>
+        { this.state.faculties.map(faculty =>
+                    <div> 
+                        <button align='center' className= {this.set_css_name(faculty.id)} type="button" onClick = {function(e){
+                            
+                            e.preventDefault();
+                            this.change_f_id(faculty.id);
+                            this.componentDidMount(faculty.id);
+                            }.bind(this)} >
 
-        <table id = 'f2_Faculty_intro'>
-            <tr>
-            Faculty_Introherefdsfklsd;anfk;lsadnfsdl;kfnsdl;kfnsdk;lfnsdklfnsdaklfnsdaklfnsdklfnsadkl;n
-            </tr>
-        </table>
+                            <pre>{faculty.name}</pre>
+                        </button>
+                    </div>)
+                
+                }
+        </div>;
 
+        view_departments = 
         <ul type="none" className = "f2_List_Pos">
-            <li><a href='#' className = "department_text">Department of Chemistry and Chemical Technologies</a></li>
-            <li><a href='#' className = "department_text">Department of Kyrgyz language</a></li>
-            <li><a href='#' className = "department_text">Russian language chair</a></li>
-            <li><a href='#' className = "department_text">Department of Food Engineering</a></li>
-            <li><a href='#' className = "department_text">Department of Canning Technology</a></li>
-            <li><a href='#' className = "department_text">Department of aritistic product design</a></li>
-            <li><a href='#' className = "department_text">Department of Technology of Light Industry Products</a></li>
-            <li><a href='#' className = "department_text">Department of Higher School of Design</a></li>
-            <li><a href='#' className = "department_text">Department of Food Technology catering</a></li>
-            <li><a href='#' className = "department_text">Department of Food Production</a></li>
-        </ul>
+        { this.state.departments.map(department => 
+                        
+                        <li><a onClick = {function(e){
+                            
+                            e.preventDefault();
+                            alert(department.id);
+                            
+                            this.setState({
+                                check_faculy_thired:true,
+                               
+                                faculy_third : <FacultyThird department_id = {department.id} onChangePage = {function(){
+                                    this.setState({
+                                        check_faculy_thired:false
+                                    });
+                    
+                                }.bind(this)}/>
+                            });
+                        }.bind(this)}>
+                        <div className = "f2_department_text">{department.name}</div></a></li>
+                    )}
+        </ul>;
+
+        view_faculty_third = this.state.check_faculy_thired ? this.state.faculy_third: '';
+        
+        return(
+            <div>             
+                <h1 id = 'Name'>Departments</h1>
+            
+                {view_faculties}
+        
+                <table id = 'f2_Faculty_intro'>
+                <tr>
+                {this.state.fauculty_info}
+                </tr>
+                </table>
+                {view_departments}
+                {view_faculty_third}
             </div>
         );
     }

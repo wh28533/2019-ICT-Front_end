@@ -12,14 +12,19 @@ class Instituties extends React.Component{
             institut: []
         }
     }
+    
     componentDidMount()
     {
         let id ='1';
-        axios.get('https://e-kundoluk-flask-server.herokuapp.com/api/timetable/klass/'+id).
+        
+        axios.get('http://192.168.1.108:8000/institute/').// error get to local host
+        
         then(res=>{
-            const institut=res.data;
+            const institut_load=res.data;
             console.log(res.data)
-            this.setState({institut})
+            this.setState({
+                institut : institut_load
+            })
         })
 
     }
@@ -33,7 +38,7 @@ class Instituties extends React.Component{
                 <div id = "f1_button_pos">
                     { this.state.institut.map(institut => <div>
                         <button align='center' className="f1_buttons" type="button" href="#">
-                            <pre>{institut.lesson_name}</pre>
+                            <pre>{institut.name}</pre>
                         </button>
                     </div>)}
 

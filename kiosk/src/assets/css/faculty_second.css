@@ -48,8 +48,8 @@
     color: white;
     font-size: 120%;
 }
-.department_text
+.f2_department_text
 {
-    color: white;
-    text-decoration: none;
+    color: rgb(65, 10, 10);
+    font-weight: bold;
 }
