@@ -1,18 +1,20 @@
 .chan {
-    text-align: center;
-    margin-left: 12%;
     font-size: 420%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    position:absolute;
+    top:18%;
+    left:33%;
+
 }
 
 .chan_2 {
-    margin-left: 10%;
-    text-align: center;
     font-size: 170%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    position:absolute;
+    top:15%;
+    left:33%;
 }
 
 
@@ -37,14 +39,18 @@
 }
 
 .main_buttons {
-    margin-left: 4%;
     width: 93%;
     height: 98%;
     border-radius: 12px;
     border: none;
     font-size: 150%;
     font-weight: bold;
-    padding: 2.5% 2.5%
+    padding: 2.5% 2.5%;
+}
+.main_buttons_location{
+    position: absolute;
+    top:35%;
+    left:4.5%;
 }
 
 .main_text_in{

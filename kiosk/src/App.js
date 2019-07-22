@@ -52,7 +52,20 @@ class App extends React.Component {
             onChangePage = {function(change_lan){
               this.setState({
 
-                lan : change_lan
+                lan : change_lan,
+
+                faculty_first: <FacultyFirst language = {change_lan}
+        
+                onChangePage = {function(new_faculty_id){
+                var new_page_storeage = this.state.page_storeage.slice();
+                new_page_storeage.push('FacultySecond');
+                this.setState({
+                 page_storeage : new_page_storeage,
+                 faculty_second : <FacultySecond faculty_id = {new_faculty_id} language = {change_lan}/>
+                
+                });
+        
+            }.bind(this)} />,
               });
         }.bind(this)}
               />
@@ -113,16 +126,18 @@ class App extends React.Component {
       }.bind(this)}
       />,
 
-      faculty_first: <FacultyFirst onChangePage = {function(new_faculty_id){
+      faculty_first: <FacultyFirst language = "en"
+        
+        onChangePage = {function(new_faculty_id){
         var new_page_storeage = this.state.page_storeage.slice();
         new_page_storeage.push('FacultySecond');
         this.setState({
          page_storeage : new_page_storeage,
-         faculty_second : <FacultySecond faculty_id = {new_faculty_id}/>
+         faculty_second : <FacultySecond faculty_id = {new_faculty_id} language = "en"/>
         
         });
 
-    }.bind(this)}/>,
+    }.bind(this)} />,
 
       faculty_second: <FacultySecond/>,
 
@@ -191,7 +206,6 @@ class App extends React.Component {
     {
       menu_bar = '';
     }
-    // Tranlate = {function(what_to_do){
     return(
         <IntlProvider
             locale="en"
