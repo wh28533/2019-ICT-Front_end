@@ -1,3 +1,7 @@
+#f1_background_width{
+    width: 95%;
+}
+
 .Name{
     position: absolute;
     margin-top:3%;
@@ -23,6 +27,6 @@
 #f1_button_pos{
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 17%;
 }
             

@@ -30,10 +30,11 @@ class FacultyFirst extends React.Component{
     render(){
         return(
             <div>
+                <div id = "f1_background_width">
                 <h1 className= "Name"><FormattedMessage id="Faculties" defaultMassage="Faculties"/></h1>
                     <div id = "f1_button_pos">
                     { this.state.faculty.map(faculty => <div>
-                        <button align='center' className="f1_buttons" type="button" onClick = {function(e){
+                        <button className="f1_buttons" type="button" onClick = {function(e){
                             e.preventDefault();
                             alert(faculty.id);
                           this.props.onChangePage(faculty.id);
@@ -41,6 +42,7 @@ class FacultyFirst extends React.Component{
                             <pre>{faculty.name}</pre>
                         </button>
                     </div>)}
+                </div>
             </div>
     
         </div>

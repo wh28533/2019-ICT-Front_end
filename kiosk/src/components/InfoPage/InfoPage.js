@@ -13,7 +13,7 @@ class InfoPage extends React.Component{
 
     render(){
         return(
-            <div>
+            <div id ="info_background_width">
             <h1 className='Name'><FormattedMessage id="Information" defaultMassage="Information"/></h1>
             <table className = "info_table_position">
             <tr>
