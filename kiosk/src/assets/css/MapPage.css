@@ -157,15 +157,17 @@
 .view_all_map:hover{
     background-color: #3e8e41;
 }
+.building_number_first{
+    margin-top: 10%;
+}
 .map_buttons{
-    background-color: #131f4e;
+    background-color:#131f4e;
     color: white;
     padding: 8px;
     font-size: 16px;
     border: none;
     width: 80%;
     margin-left: 20%;
-    margin-top: 10%;
 }
 /**********************************************************************************************************************************/
 .col-sm-9{

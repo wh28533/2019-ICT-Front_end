@@ -18,38 +18,10 @@ class TeachersName extends React.Component{
             time4:{},
             time5:{},
             time6:{},
+            cansel:false,
             check_shedule : false,
-            schedule_table: <Teacher_Schedule/>,
+            schedule_table: '',
             check_name:true,
-         // //   Techer_name_table:<div id='New_screen_for_department'>
-         //
-         //        <div id='Teacher_Schedule_Name'>Professor List Title</div>
-         //
-         //        <a href='#' onClick={function(e){
-         //            this.setState({
-         //                check_name:false,
-         //                check_shedule:true,
-         //
-         //            });
-         //
-         //        }.bind(this)}><img id='Teacher_cancel' src='./image/cancel.png'/></a>
-         //
-         //        <div id='Teacher_Schedule_List_Pos'>
-         //            { this.props.teacher_name.map(teacher_name =>
-         //
-         //                <button className='Professor_button'  onClick={function(e){
-         //
-         //                    e.preventDefault();
-         //                    this.Tch_Schedule(teacher_name.id,);
-         //
-         //                }.bind(this)}> <span>Teacher Name</span> {teacher_name.name  }<br/> <span>Status :</span> {teacher_name.status  }
-         //                </button> )}
-         //
-         //
-         //        </div>
-         //        <div >aaaaa</div>
-         //    </div>
-
         }
     }
 
@@ -57,7 +29,7 @@ class TeachersName extends React.Component{
         alert("In Techers"+this.props.teacher_name)
         console.log("teacher id -:"+id)
 
-        axios.get('https://nameless-dusk-42348.herokuapp.com/en/schedule/teacher/'+id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/schedule/teacher/'+id).
         then(res=>{
             const T_Schedule=res.data;
             console.log("Teacher Schedule");
@@ -195,7 +167,7 @@ class TeachersName extends React.Component{
 
         var i
         for (i=1;i<7;i++){
-            if( time1["day_of_week"+i].length==0){
+            if( time1["day_of_week"+i].length===0){
                 time1["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -222,7 +194,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time2["day_of_week"+i].length==0){
+            if( time2["day_of_week"+i].length===0){
                 time2["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -249,7 +221,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time3["day_of_week"+i].length==0){
+            if( time3["day_of_week"+i].length===0){
                 time3["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -276,7 +248,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time4["day_of_week"+i].length==0){
+            if( time4["day_of_week"+i].length===0){
                 time4["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -303,7 +275,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time5["day_of_week"+i].length==0){
+            if( time5["day_of_week"+i].length===0){
                 time5["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -330,7 +302,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time6["day_of_week"+i].length==0){
+            if( time6["day_of_week"+i].length===0){
                 time6["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -376,6 +348,7 @@ class TeachersName extends React.Component{
 
             schedule_table : <Teacher_Schedule time1= {time1 } time2={time2} time3={time3} time4={time4} time5={time5} time6={time6} />,
             check_shedule:true,
+            cansel:true
 
         });
         console.log("Shedule table");
@@ -389,21 +362,19 @@ class TeachersName extends React.Component{
     render(){
         var view_schedule_table = this.state.check_shedule ? this.state.schedule_table: '';
         var teacher_name = this.state.check_name ? "New_screen_for_department" :"DisplayBlock";
+        var cansel=this.state.cansel ? "none":"DisplayBlock"
 
         return(
         <div>
             <div className={teacher_name}>
 
                 <div id='Teacher_Schedule_Name'>Professor List Title</div>
+                <i className="fas fa-eye"></i>
 
                 <a href='#' onClick={function(e){
-                    this.setState({
-                        check_name:false,
-                        check_shedule:true,
 
-                    });
 
-                }.bind(this)}><img id='Teacher_cancel' src={require('../../assets/image/cancel.png')}/></a>
+                }.bind(this)}><img  className={cansel}  id='Teacher_cancel' src={require('../../assets/image/cancel.png')}/></a>
 
                 <div id='Teacher_Schedule_List_Pos'>
                     { this.props.teacher_name.map(teacher_name =>
@@ -412,7 +383,11 @@ class TeachersName extends React.Component{
 
                             e.preventDefault();
                             this.Tch_Schedule(teacher_name.id,);
+                            this.setState({
+                                check_name:false,
+                                check_shedule:true,
 
+                            });
 
                         }.bind(this)}> <span>Teacher Name</span> {teacher_name.name  }<br/> <span>Status :</span> {teacher_name.status  }
                         </button> )}

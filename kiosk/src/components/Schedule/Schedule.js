@@ -39,7 +39,7 @@ class Schedule extends React.Component{
             check_shedule : false,
             schedule_table: <Shedule_table/>,
             check_tName:false,
-            teacher_name:<TeachersName/>,
+            teacher_name:<TeachersName language = {this.props.language}/>,
 
 
 
@@ -73,8 +73,8 @@ class Schedule extends React.Component{
             faculty_id= this.state.faculty_id;
             // department_id= this.state.department_id;
         }
-
-        axios.get('https://nameless-dusk-42348.herokuapp.com/ru/faculty/').
+        alert('언어'+this.props.language);
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
         then(res=>{
             const faculties=res.data;
              console.log(res.data);
@@ -85,7 +85,7 @@ class Schedule extends React.Component{
         });
 
         console.log("Faculty id "+this.state.faculty_id);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/ru/faculty/'+faculty_id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+faculty_id).
         then(res=>{
             const departments=res.data.departments_of_faculty;
              console.log("departments "+res.data);
@@ -102,7 +102,7 @@ class Schedule extends React.Component{
     }
     Groups_name (department_id){
         console.log("department_id "+department_id);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/ru/department/'+department_id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+department_id).
         then(res=>{
             const groups=res.data.groups;
             console.log(res.data);
@@ -114,7 +114,7 @@ class Schedule extends React.Component{
 
 
      Shedule =(groups_id)=> {
-         axios.get('https://nameless-dusk-42348.herokuapp.com/en/schedule/group/' + groups_id).then(res => {
+         axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/schedule/group/' + groups_id).then(res => {
              const shedule_load = res.data;
              this.setState({
                  sсhedule: shedule_load
@@ -248,7 +248,7 @@ class Schedule extends React.Component{
 
                  var i
                  for (i=1;i<7;i++){
-                    if( time1["day_of_week"+i].length==0){
+                    if( time1["day_of_week"+i].length===0){
                         time1["day_of_week"+i]=[{"day_of_week": '',
                                                     "subject": {
                                                     "name": " "
@@ -275,7 +275,7 @@ class Schedule extends React.Component{
                                                     }
                                             }]
                     }
-                     if( time2["day_of_week"+i].length==0){
+                     if( time2["day_of_week"+i].length===0){
                          time2["day_of_week"+i]=[{"day_of_week": '',
                              "subject": {
                                  "name": " "
@@ -302,7 +302,7 @@ class Schedule extends React.Component{
                              }
                          }]
                      }
-                     if( time3["day_of_week"+i].length==0){
+                     if( time3["day_of_week"+i].length===0){
                          time3["day_of_week"+i]=[{"day_of_week": '',
                              "subject": {
                                  "name": " "
@@ -329,7 +329,7 @@ class Schedule extends React.Component{
                              }
                          }]
                      }
-                     if( time4["day_of_week"+i].length==0){
+                     if( time4["day_of_week"+i].length===0){
                          time4["day_of_week"+i]=[{"day_of_week": '',
                              "subject": {
                                  "name": " "
@@ -356,7 +356,7 @@ class Schedule extends React.Component{
                              }
                          }]
                      }
-                     if( time5["day_of_week"+i].length==0){
+                     if( time5["day_of_week"+i].length===0){
                          time5["day_of_week"+i]=[{"day_of_week": '',
                              "subject": {
                                  "name": " "
@@ -383,7 +383,7 @@ class Schedule extends React.Component{
                              }
                          }]
                      }
-                     if( time6["day_of_week"+i].length==0){
+                     if( time6["day_of_week"+i].length===0){
                          time6["day_of_week"+i]=[{"day_of_week": '',
                              "subject": {
                                  "name": " "
@@ -532,7 +532,7 @@ Show=()=>{
             console.log(teachers);
             this.setState({
                 check_tName:false,
-                teacher_name : <TeachersName teacher_name={teachers} />
+                teacher_name : <TeachersName teacher_name={teachers} language = {this.props.language} />
             });
         });
     }

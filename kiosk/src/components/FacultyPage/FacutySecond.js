@@ -33,14 +33,14 @@ class FacultySecond extends React.Component{
             id = this.state.faculty_id;
         }
         alert(this.props.language);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/').
         then(res=>{
             const faculty_load=res.data;
             this.setState({
                 faculties: faculty_load
             });
         });
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/'+id).
         then(res=>{
             const departments_load=res.data.departments_of_faculty;
             const faculty_load=res.data.about;

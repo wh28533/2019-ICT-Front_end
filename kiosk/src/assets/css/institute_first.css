@@ -13,7 +13,7 @@
 .i1_buttons{
     border-radius: 12px;
     background-color:powderblue;
-    width: 200%;
+    width: 150%;
     height: 10%;
     border-color: none;
     font-size: 180%;
@@ -26,7 +26,7 @@
 }
 #i1_button_pos{
     position: absolute;
-    top: 20%;
-    left: 17%;
+    top: 30%;
+    left: 20.5%;
 }
             

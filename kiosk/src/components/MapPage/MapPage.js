@@ -82,7 +82,7 @@ class MapPage extends React.Component
                         }.bind(this)}><FormattedMessage id="View all map" defaultMassage="View all map"/>  </button>
                        
                         <div className="dropdown" onClick={this.ChangeFalClassname.bind(this)} >
-                            <button className="dropbtn map_buttons"  ><FormattedMessage id="Building Number" defaultMassage="Building Number"/> : <FormattedMessage id = {this.state.bulding_num} defaultMessage =  {this.state.bulding_num}/></button>
+                            <button className="dropbtn map_buttons building_number_first"  ><FormattedMessage id="Building Number" defaultMassage="Building Number"/> : <FormattedMessage id = {this.state.bulding_num} defaultMessage =  {this.state.bulding_num}/></button>
                             <div className={Building}>
                                 <a onClick = {function(e){
                                     e.preventDefault();
@@ -102,7 +102,7 @@ class MapPage extends React.Component
                         </div>
 
                         <div className={FloorButtonNone} onClick={this.ChangeGradClassname.bind(this)}>
-                            <button className="dropbtn" ><FormattedMessage id="Floor Number" defaultMassage=" Floor Number"/> : <FormattedMessage id = {this.state.floor_num} defaultMessage =  {this.state.floor_num}/></button>
+                            <button className="dropbtn map_buttons" ><FormattedMessage id="Floor Number" defaultMassage=" Floor Number"/> : <FormattedMessage id = {this.state.floor_num} defaultMessage =  {this.state.floor_num}/></button>
                             <div className={Floor}>
                                 {view_under_button}
                             </div>

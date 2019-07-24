@@ -20,7 +20,7 @@ class FacultyThird extends React.Component
     
     componentDidMount()
     {
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+this.props.department_id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/department/'+this.props.department_id).
         then(res=>{
             const info_load = res.data.about;
             const professer_load=res.data.teachers;
@@ -34,6 +34,7 @@ class FacultyThird extends React.Component
     }
  
     render(){
+
         return(
          <div>
          <div id = 'New_screen_for_department'></div>
@@ -48,18 +49,20 @@ class FacultyThird extends React.Component
 <a onClick = {function(e){
     e.preventDefault();
     this.props.onChangePage();
-}.bind(this)}><img  id = 'Teacher_cancel' src = {require('../../assets/image/cancel.png')}/></a>
+}.bind(this)}><img  id = 'f3_Teacher_cancel' src = {require('../../assets/image/cancel.png')}/></a>
 
 <div id = 'Teacher_List_Pos'>
 
-{this.state.professers.map(professer =>  <table className = 'Teacher_Name_Card'>
-<tr>
-   <td>
-    <img className = 'Teacher_photo' src = {require('../../assets/image/Asset 1.png')}/>
+{this.state.professers.map(professer => 
+
+<table className = 'Teacher_Name_Card'>
+<tr className="f3_tr1">
+   <td >
+    <img className = 'Teacher_photo' src = {professer.photo}/>
     </td> 
 </tr>
-<tr><td>{professer.name}</td></tr>
-<tr><td>{professer.contact}</td></tr>
+<tr className = "f3_tr2"><td >{professer.name}</td></tr>
+<tr className = "f3_tr3"><td >{professer.contact}</td></tr>
 
 </table>)}
 

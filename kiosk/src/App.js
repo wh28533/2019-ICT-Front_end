@@ -33,7 +33,7 @@ class App extends React.Component {
       page_storeage :['MainPage'],
       check_menu_bar : false,
 
-      main_page: <div>
+      main_page: <div className = "main_screen_size">
       <div className="container">
         <MainHeader/>
 
@@ -55,7 +55,10 @@ class App extends React.Component {
               this.setState({
 
                 lan : change_lan,
-
+                
+                
+                shedule_page: <Shedule language = {change_lan}/>,
+                
                 faculty_first: <FacultyFirst language = {change_lan}
         
                 onChangePage = {function(new_faculty_id){
@@ -175,7 +178,7 @@ class App extends React.Component {
       institute_second: <instituteSecond/>,
 
       info_page:<InfoPage/>,
-      shedule_page: <Shedule/>,
+      shedule_page: <Shedule language = "en"/>,
       
       univinfo_page:<UnivInfoPage/>,
       map_page:<MapPage/>

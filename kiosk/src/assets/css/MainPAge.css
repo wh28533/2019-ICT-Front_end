@@ -1,5 +1,5 @@
 .chan {
-    font-size: 420%;
+    font-size:420%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     position:absolute;
@@ -39,11 +39,11 @@
 }
 
 .main_buttons {
-    width: 93%;
-    height: 98%;
+    max-width: 93%;
+    max-height: 98%;
     border-radius: 12px;
     border: none;
-    font-size: 150%;
+    font-size: 140%;
     font-weight: bold;
     padding: 1.5% 1.5%;
 }
@@ -66,4 +66,7 @@
 }
 .main_rr{
     list-style: none;
+}
+.main_screen_size{
+    max-width:95%;
 }
