@@ -60,12 +60,11 @@ class MapPage extends React.Component
                 this.setState({
                     floor_num : String(i)
                 });
-
             }.bind(this)}>{i} building</a>);
         }
         
         return (
-            <div>
+            <div className="Map_fullscreen">
                 <header>
                 <h1 className="Name"><FormattedMessage id="Map" defaultMassage="Map"/></h1>
                 </header>

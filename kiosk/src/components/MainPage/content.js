@@ -7,6 +7,7 @@ class content extends React.Component{
     render(){
     return (
         <div>
+        <div className ="main_buttons_location">
         <div className="row">
             <div className="col-lg-1">
             </div>
@@ -56,7 +57,7 @@ class content extends React.Component{
             <div className="col-lg-5">
                 <button type="button" className="btn-light main_buttons" onClick = {function(e){
                     e.preventDefault();
-                    this.props.onChangePage("Instituties");
+                    this.props.onChangePage("InstituteFirst");
 
                 }.bind(this)}>
                     <div className="main_icons" align='left'>
@@ -98,6 +99,7 @@ class content extends React.Component{
                 </div>
                 <div className="col-lg-1">
                 </div>
+            </div>
             </div>
         </div>
     );

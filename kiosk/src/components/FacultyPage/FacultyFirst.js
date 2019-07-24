@@ -17,11 +17,9 @@ class FacultyFirst extends React.Component{
     
         componentDidMount()
         {
-
-                axios.get('http://192.168.1.122:8000/faculty/').
+                axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').///http://127.0.0.1:8000/
                 then(res=>{
                     const faculty_load=res.data;
-                  //  console.log(res.data);
                     this.setState({
                         faculty: faculty_load
                     });
@@ -32,10 +30,11 @@ class FacultyFirst extends React.Component{
     render(){
         return(
             <div>
+                <div id = "f1_background_width">
                 <h1 className= "Name"><FormattedMessage id="Faculties" defaultMassage="Faculties"/></h1>
                     <div id = "f1_button_pos">
                     { this.state.faculty.map(faculty => <div>
-                        <button align='center' className="f1_buttons" type="button" onClick = {function(e){
+                        <button className="f1_buttons" type="button" onClick = {function(e){
                             e.preventDefault();
                             alert(faculty.id);
                           this.props.onChangePage(faculty.id);
@@ -44,6 +43,7 @@ class FacultyFirst extends React.Component{
                             <pre>{faculty.name}</pre>
                         </button>
                     </div>)}
+                </div>
             </div>
     
         </div>

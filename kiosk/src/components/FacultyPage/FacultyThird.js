@@ -12,185 +12,60 @@ class FacultyThird extends React.Component
     {
         super(props);
         this.state = {
-            page_num : 1,
-            pofessers:[],
-            view_professors:''
+            department_info:[],
+            professers:[],
+            department_name:[]
         };
     }
     
     componentDidMount()
     {
-        axios.get('http://192.168.1.122:8000/department/'+this.props.department_id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+this.props.department_id).
         then(res=>{
+            const info_load = res.data.about;
             const professer_load=res.data.teachers;
-           // console.log(res.data);
+            const department_name_load = res.data.name;
             this.setState({
-                professer: professer_load
+                professers: professer_load,
+                department_info:info_load,
+                department_name:department_name_load
             });
         });
     }
-    
-    make_view()
-    {
-    }
-    
+ 
     render(){
         return(
-            <div>
-                
-    <div id = 'f3_New_screen_for_department'></div>
+         <div>
+         <div id = 'New_screen_for_department'></div>
 
-<table id = 'f3_Department_Intro'>
-    <td>Department Intro here</td>
+<table id = 'Department_Intro'>
+    <tr className  = "f3_department_name" ><td >{this.state.department_name}</td></tr>
+    <tr className = "f3_department_info"><td>{this.state.department_info}</td></tr>
 </table>
 
 <div id = 'f3_Teacher_page_num'>-
     {this.state.page_num} -</div>
-
 <a onClick = {function(e){
     e.preventDefault();
     this.props.onChangePage();
-}.bind(this)}>
-<img  id = 'f3_Teacher_cancel' src = {require('../.././assets/image/cancel.png')}/></a>
+}.bind(this)}><img  id = 'Teacher_cancel' src = {require('../../assets/image/cancel.png')}/></a>
 
-<a onClick = {function(e){
-    e.preventDefault();
-    if(this.state.page_num != ((this.state.professer.length-1) / 6) + 1)
-    {
-        this.setState((prevState) => {
-            return {
-            page_num : prevState.page_num + 1
-            }
-          });
-    }
+<div id = 'Teacher_List_Pos'>
 
-}.bind(this)}><img id = 'f3_Teacher_next' src={require('../.././assets/image/right_triangle.png')} title='next'/></a>
-
-
-<a onClick = {function(e){
-    e.preventDefault();
-    if(this.state.page_num != 1)
-    {
-        this.setState((prevState) => {
-            return {
-            page_num : prevState.page_num - 1
-            }
-          });
-    }
-
-}.bind(this)}><img id = 'f3_Teacher_prev' src={require('../.././assets/image/left_triangle.png')} title='prev'/></a>
-
-<table id = 'f3_List_Pos'>
+{this.state.professers.map(professer =>  <table className = 'Teacher_Name_Card'>
 <tr>
-    <td align = 'center'> 
-    <table className = 'f3_Teacher_Name_Card'>
-        <tr>
-           <td>
-            <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-            </td> 
-        </tr>
-        <tr><td>Name</td></tr>
-        <tr><td>Status</td></tr>
-        <tr><td>Contacts-1</td></tr>
-        <tr><td>Contacts-2</td></tr>
-    </table>
-    </td>
-    <td align = 'center'>
-        <table className = 'f3_Teacher_Name_Card'>
-            <tr>
-            <td>
-                <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-            </td> 
-            </tr>
-            <tr><td>Name</td></tr>
-            <tr><td>Status</td></tr>
-            <tr><td>Contacts-1</td></tr>
-            <tr><td>Contacts-2</td></tr>
-        </table>
-    </td>
-    <td align = 'center'>
-        <table className = 'f3_Teacher_Name_Card'>
-            <tr>
-               <td>
-                <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-                </td> 
-            </tr>
-            <tr><td>Name</td></tr>
-            <tr><td>Status</td></tr>
-            <tr><td>Contacts-1</td></tr>
-            <tr><td>Contacts-2</td></tr>
-        </table>
-    </td>
-    <td align = 'center'>
-            <table className = 'f3_Teacher_Name_Card'>
-                  <tr>
-                      <td>
-                          <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-                      </td> 
-                  </tr>
-                  <tr><td>Name</td></tr>
-                  <tr><td>Status</td></tr>
-                  <tr><td>Contacts-1</td></tr>
-                  <tr><td>Contacts-2</td></tr>
-              </table>  
-          </td>
+   <td>
+    <img className = 'Teacher_photo' src = {require('../../assets/image/Asset 1.png')}/>
+    </td> 
 </tr>
-<tr>
-        <td align = 'center'>
-            <table className = 'f3_Teacher_Name_Card'>
-                <tr>
-                   <td>
-                    <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-                    </td> 
-                </tr>
-                <tr><td>Name</td></tr>
-                <tr><td>Status</td></tr>
-                <tr><td>Contacts-1</td></tr>
-                <tr><td>Contacts-2</td></tr>
-            </table>
-        </td>
-        <td align = 'center'>
-           <table className = 'f3_Teacher_Name_Card'>
-                <tr>
-                    <td>
-                        <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-                    </td> 
-                </tr>
-                <tr><td>Name</td></tr>
-                <tr><td>Status</td></tr>
-                <tr><td>Contacts-1</td></tr>
-                <tr><td>Contacts-2</td></tr>
-            </table> 
-        </td>
-        <td align = 'center'>
-          <table className = 'f3_Teacher_Name_Card'>
-                <tr>
-                    <td>
-                        <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-                    </td> 
-                </tr>
-                <tr><td>Name</td></tr>
-                <tr><td>Status</td></tr>
-                <tr><td>Contacts-1</td></tr>
-                <tr><td>Contacts-2</td></tr>
-            </table>  
-        </td>
-        <td align = 'center'>
-                <table className = 'f3_Teacher_Name_Card'>
-                      <tr>
-                          <td>
-                              <img className = 'f3_Teacher_photo' src = {require('../.././assets/image/Asset 1.png')}/>
-                          </td> 
-                      </tr>
-                      <tr><td>Name</td></tr>
-                      <tr><td>Status</td></tr>
-                      <tr><td>Contacts-1</td></tr>
-                      <tr><td>Contacts-2</td></tr>
-                  </table>  
-            </td>
-    </tr>
-</table>
-            </div>
+<tr><td>{professer.name}</td></tr>
+<tr><td>{professer.contact}</td></tr>
+
+</table>)}
+
+
+</div>
+         </div>
         );
     }
 }

@@ -1,4 +1,4 @@
-#f1_background_width{
+#i1_background_width{
     width: 95%;
 }
 
@@ -10,7 +10,7 @@
     font-size:40pt;
 }
 
-.f1_buttons{
+.i1_buttons{
     border-radius: 12px;
     background-color:powderblue;
     width: 200%;
@@ -24,7 +24,7 @@
     position: relative;
     z-index: 0;
 }
-#f1_button_pos{
+#i1_button_pos{
     position: absolute;
     top: 20%;
     left: 17%;

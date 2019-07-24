@@ -32,20 +32,18 @@ class FacultySecond extends React.Component{
         {
             id = this.state.faculty_id;
         }
-        
-        axios.get('http://192.168.1.122:8000/faculty/').
+        alert(this.props.language);
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
         then(res=>{
             const faculty_load=res.data;
-           // console.log(res.data);
             this.setState({
                 faculties: faculty_load
             });
         });
-        axios.get('http://192.168.1.122:8000/faculty/'+id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+id).
         then(res=>{
             const departments_load=res.data.departments_of_faculty;
             const faculty_load=res.data.about;
-           // console.log(res.data);
             this.setState({
                 departments: departments_load,
                 fauculty_info: faculty_load
@@ -95,11 +93,11 @@ class FacultySecond extends React.Component{
                             
                             e.preventDefault();
                             alert(department.id);
-                            
+                            var t_language = this.props.language;
                             this.setState({
                                 check_faculy_thired:true,
                                
-                                faculy_third : <FacultyThird department_id = {department.id} onChangePage = {function(){
+                                faculy_third : <FacultyThird department_id = {department.id} language = {t_language} onChangePage = {function(){
                                     this.setState({
                                         check_faculy_thired:false
                                     });
