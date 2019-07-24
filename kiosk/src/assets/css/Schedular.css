@@ -1,23 +1,27 @@
 .dropbtn {
-    background-color: #131f4e;
-    color: white;
-    padding: 12px;
+
+    background-color: rgba(239, 244, 255, 0.5);
+    border: 1px solid rgba(200, 200, 200, 0.7);
+    color: black;
+    padding: 8px;
     /*position: relative;*/
     font-size: 16px;
     border: none;
     /*cursor: pointer;*/
     width: 80%;
     margin-left: 20%;
+    border-radius: 3px;
     /*margin-right: 10%;*/
 
 }
 .DisplayBlock {
     display: none;
 }
-.dropbtnGroup {
-  display: none;
+.none {
+  display: block;
 }
 .col-sm-3{
+
     margin-left: 0%;
 }
 .col-sm-9{
@@ -38,27 +42,32 @@
     /*margin-right: 10%;*/
     display: block;
     position: relative;
-    background-color: #f9f9f9;
+    border: 1px solid rgba(200, 200, 200, 0.7); /* Green border */
+    border-radius: 3px;
+    background-color: rgba(234, 239, 250, 0.5);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-fal-block  a {
+    border: 1px solid rgba(200, 200, 200, 0.7);
     color: black;
-    padding: 12px 16px;
+    padding: 10px 14px;
+    border-radius: 3px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-fal-block  a:hover {background-color: #f1f1f1}
+.dropdown-fal-block  a:hover {  background-color: rgba(255, 255, 255, 0.6);}
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 .dropbtn:hover  {
-    background-color: #3e8e41;
+    background-color: rgba(204, 208, 218, 0.5);
+
 }
 /************************************/
 .dropdown-grade {
@@ -72,7 +81,7 @@
     /*margin-right: 10%;*/
     display: block;
     position: relative;
-    background-color: #f9f9f9;
+    background-color: rgba(204, 208, 218, 0.5);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -80,12 +89,12 @@
 
 .dropdown-grade-block  a {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-grade-block  a:hover {background-color: #f1f1f1}
+.dropdown-grade-block  a:hover { background-color: rgba(255, 255, 255, 0.6);}
 
 /************************************/
 .dropdown-group {
@@ -99,7 +108,7 @@
     /*margin-right: 10%;*/
     display: block;
     position: relative;
-    background-color: #f9f9f9;
+    background-color: rgba(204, 208, 218, 0.5);
     /*min-width: 160px;*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -108,12 +117,12 @@
 
 .dropdown-group-block  a {
     color: black;
-    padding: 12px 5px;
+    padding: 10px 14px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-group-block  a:hover {background-color: #f1f1f1}
+.dropdown-group-block  a:hover {background-color: rgba(255, 255, 255, 0.6);}
 /*************************************************************************************************************/
 .Aleft{
     color: #f1f1f1;
@@ -143,21 +152,22 @@
 }
 .Aleft  a {
     color: #28ff26;
-    padding: 12px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     display: block;
 }
 .Bleft  a {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     display: block;
 }
 .StudentSubmit{
     margin-top: 20px;
-    background-color: #131f4e;
-    color: white;
-    padding: 12px;
+    background-color: rgba(239, 244, 255, 0.5);
+    border: 1px solid rgba(200, 200, 200, 0.7);
+    color: black;
+    padding: 8px;
     /*position: relative;*/
     font-size: 16px;
     border: none;
@@ -167,7 +177,7 @@
     /*margin-right: 10%;*/
 }
 .StudentSubmit:hover{
-    background-color: #3e8e41;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -175,9 +185,9 @@
 
 /*********************************************************************************Teacher Schedule Menu Css**************************************************************/
 .dropbtnTecher {
-    background-color: #131f4e;
+    background-color: rgba(204, 208, 218, 0.5);
     color: white;
-    padding: 12px;
+    padding: 8px;
     /*position: relative;*/
     font-size: 16px;
     border: none;
@@ -187,7 +197,7 @@
     /*margin-right: 10%;*/
 }
 .dropdivTecher{
-    margin-top: 10%;
+    margin-top: 0%;
 }
 
 .dropdown-TeacherFalNone {
@@ -200,15 +210,15 @@
     /*margin-right: 10%;*/
     display: block;
     position: relative;
-    background-color: #f9f9f9;
+    background-color: rgba(204, 208, 218, 0.5);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-TeacherFal  a {
-    color: black;
-    padding: 12px 16px;
+    color: white;
+    padding: 8px 12px;
     text-decoration: none;
     display: block;
 }
@@ -220,13 +230,13 @@
 }
 
 .dropbtnTecher:hover  {
-    background-color: #3e8e41;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 .TeacherSubmit{
     margin-top: 20px;
-    background-color: #131f4e;
+    background-color: rgba(204, 208, 218, 0.5);
     color: white;
-    padding: 12px;
+    padding: 8px;
     /*position: relative;*/
     font-size: 16px;
     border: none;
@@ -236,7 +246,7 @@
     /*margin-right: 10%;*/
 }
 .TeacherSubmit:hover{
-    background-color: #3e8e41;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /*/*****************************************************************************************************************************/
@@ -268,11 +278,13 @@
 }
 
 .schedule_table {
+    font-size: small;
     table-layout: fixed;
     word-break: break-all;
     width: 90%;
     margin-left: 4%;
     margin-right: 0%;
+    margin-top: 2%;
     height: 90%;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.8);
@@ -310,4 +322,84 @@
     font-family: 'Arial';
     text-align: middle;
     border-radius: 10px;
+}
+
+/******************************************************For Techer's name**************************************************/
+body {
+
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+#Teacher_Schedule_Name {
+    position: absolute;
+    margin-left: 100px;
+    z-index: 2;
+    color: white;
+    font-size: 30pt;
+}
+
+#Teacher_Schedule_List_Pos{
+    position: absolute;
+    /*background-color: #0062cc;*/
+    top: 50px;
+    margin: 15px;
+    z-index: 1;
+    /*max-width: 780px;*/
+    max-height: 300px;
+    table-layout: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /*scroll-behavior: smooth;*/
+}
+
+::-webkit-scrollbar{width: 10px;}
+::-webkit-scrollbar-track{
+    background-color: rgba(250, 250, 250, 0.8);
+    border-radius: 18px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(192,192,192,0.8);
+    border-radius: 18px;
+}
+
+
+#Teacher_cancel{
+    position: absolute;
+    top: 2.5%;
+    right: 2.5%;
+    z-index: 2;
+    width: 1%;
+    height: auto;
+}
+
+#New_screen_for_department{
+
+    background-color: rgba(250, 250, 250, 0.8);
+    width: 880px;
+    height: 400px;
+    border-radius: 12px;
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 4%;
+    z-index: 1;
+}
+
+.Professor_button{
+    position: relative;
+    float: left;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    background-color: white;
+    border-radius: 12px;
+    color: #2e58dd;
+    word-break: break-all;
+    font-size: 16px;
+    text:bold;
+    text-align: justify;
+    height: 100px;
+    width: 350px;
 }

@@ -39,6 +39,7 @@ class FacultyFirst extends React.Component{
                             e.preventDefault();
                             alert(faculty.id);
                           this.props.onChangePage(faculty.id);
+                            this.componentDidMount(faculty.id);
                         }.bind(this)} >
                             <pre>{faculty.name}</pre>
                         </button>

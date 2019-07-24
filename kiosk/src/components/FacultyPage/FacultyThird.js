@@ -44,7 +44,8 @@ class FacultyThird extends React.Component
     <td>Department Intro here</td>
 </table>
 
-<div id = 'f3_Teacher_page_num'>- {this.state.page_num} -</div>
+<div id = 'f3_Teacher_page_num'>-
+    {this.state.page_num} -</div>
 
 <a onClick = {function(e){
     e.preventDefault();

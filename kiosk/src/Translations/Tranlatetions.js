@@ -25,13 +25,17 @@ export default {
         // /******************************Schdule Menu*******************************************/
         "Studen's Scheduler Menu Title":"student schedule",
         "ShelMenuFaculty":"Falculty",
-        "ShelMenuGrade":"Grade",
+        "ShelMenuDepart":"Department",
         "ShelMenuGroup":"Group",
         "StudentSubmit":"View schedule",
 
         "Teacher's Scheduler Menu Title":"Teacher Schedule",
-        "TeacherSubmit":"View schedule",
 
+        "TeacherSubmit":"View schedule",
+        "TeacherScheduleFaculty":"Faculty",
+        "TeacherScheduleTName":"Teacher's name",
+
+        "TDepartment":"Department",
         // /*********************************Map Menu**********************************************/
         "Building Number":"Building Number",
         "Floor Number":"Floor Number",
@@ -66,7 +70,7 @@ export default {
         // /******************************Schdule Menu*******************************************/
         "Studen's Scheduler Menu Title":"расписание студентов",
         "ShelMenuFaculty":"Факультет",
-        "ShelMenuGrade":"Курс",
+        "ShelMenuDepart":"Кафедра",
         "ShelMenuGroup":"группа",
         "StudentSubmit":"Посмотреть расписание",
 
@@ -107,7 +111,7 @@ export default {
         // /******************************Schdule Menu*******************************************/
         "Studen's Scheduler Menu Title":"Студенттин расписаниеси",
         "ShelMenuFaculty":"Факультети",
-        "ShelMenuGrade":"Курсу",
+        "ShelMenuDepart":"Болуму",
         "ShelMenuGroup":"Группасы",
         "StudentSubmit":"Расписаниени коруу",
 
