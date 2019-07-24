@@ -377,7 +377,7 @@ body {
     height: auto;
 }
 
-#New_screen_for_department{
+.New_screen_for_department{
 
     background-color: rgba(250, 250, 250, 0.8);
     width: 880px;

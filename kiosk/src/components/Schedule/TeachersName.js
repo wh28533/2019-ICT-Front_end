@@ -20,7 +20,7 @@ class TeachersName extends React.Component{
             time6:{},
             check_shedule : false,
             schedule_table: <Teacher_Schedule/>,
-           // check_name:true,
+            check_name:true,
          // //   Techer_name_table:<div id='New_screen_for_department'>
          //
          //        <div id='Teacher_Schedule_Name'>Professor List Title</div>
@@ -373,9 +373,10 @@ class TeachersName extends React.Component{
             time6:time6,
         })
         this.setState({
-            check_shedule:false,
 
-            schedule_table : <Teacher_Schedule time1= {time1 } time2={time2} time3={time3} time4={time4} time5={time5} time6={time6} />
+            schedule_table : <Teacher_Schedule time1= {time1 } time2={time2} time3={time3} time4={time4} time5={time5} time6={time6} />,
+            check_shedule:true,
+
         });
         console.log("Shedule table");
         console.log(time1)
@@ -387,11 +388,11 @@ class TeachersName extends React.Component{
     }
     render(){
         var view_schedule_table = this.state.check_shedule ? this.state.schedule_table: '';
-        //var teacher_name = this.state.check_name ? this.state.Techer_name_table: '';
+        var teacher_name = this.state.check_name ? "New_screen_for_department" :"DisplayBlock";
 
         return(
         <div>
-            <div id='New_screen_for_department'>
+            <div className={teacher_name}>
 
                 <div id='Teacher_Schedule_Name'>Professor List Title</div>
 
@@ -402,7 +403,7 @@ class TeachersName extends React.Component{
 
                     });
 
-                }.bind(this)}><img id='Teacher_cancel' src='./image/cancel.png'/></a>
+                }.bind(this)}><img id='Teacher_cancel' src={require('../../assets/image/cancel.png')}/></a>
 
                 <div id='Teacher_Schedule_List_Pos'>
                     { this.props.teacher_name.map(teacher_name =>
@@ -412,12 +413,13 @@ class TeachersName extends React.Component{
                             e.preventDefault();
                             this.Tch_Schedule(teacher_name.id,);
 
+
                         }.bind(this)}> <span>Teacher Name</span> {teacher_name.name  }<br/> <span>Status :</span> {teacher_name.status  }
                         </button> )}
 
 
                 </div>
-                <div >aaaaa</div>
+
             </div>
             {view_schedule_table}
         </div>
