@@ -9,7 +9,8 @@ import RightButtons from './components/RightButtons/RightButtons';
 import MenuBar from './components/RightButtons/MenuBar';
 import InfoPage from './components/InfoPage/InfoPage';
 import Shedule from './components/Schedule/Schedule';
-import Instituties from './components/Instituties/Instituties';
+import InstituteFirst from './components/Instituties/InstitutieFirst';
+import InstituteSecond from './components/Instituties/InstituteSecond';
 import MapPage from './components/MapPage/MapPage';
 import UnivInfoPage from './components/UnivInfo/UnivInfoPage';
 
@@ -20,6 +21,7 @@ import '../src/assets/css/MainPage.css';
 
 
 import './App.css';
+
 class App extends React.Component {
 
   constructor(props)
@@ -66,6 +68,22 @@ class App extends React.Component {
                 });
         
             }.bind(this)} />,
+
+
+            institute_first: <InstituteFirst  language = {change_lan}
+
+            onChangePage = {function(new_institute_id){
+              var new_page_storeage = this.state.page_storeage.slice();
+              new_page_storeage.push('InstituteSecond');
+              this.setState({
+               page_storeage : new_page_storeage,
+               institute_second : <InstituteSecond institute_id = {new_institute_id} language = {change_lan}/>
+              
+              });
+      
+          }.bind(this)} />,
+
+
               });
         }.bind(this)}
               />
@@ -141,14 +159,27 @@ class App extends React.Component {
 
       faculty_second: <FacultySecond/>,
 
-      instituties: <Instituties/>,
+      institute_first: <InstituteFirst  language = "en"
+
+      onChangePage = {function(new_institute_id){
+        var new_page_storeage = this.state.page_storeage.slice();
+        new_page_storeage.push('InstituteSecond');
+        this.setState({
+         page_storeage : new_page_storeage,
+         institute_second : <InstituteSecond institute_id = {new_institute_id} language = "en"/>
+        
+        });
+
+    }.bind(this)} />,
+
+      institute_second: <instituteSecond/>,
 
       info_page:<InfoPage/>,
       shedule_page: <Shedule/>,
       
       univinfo_page:<UnivInfoPage/>,
       map_page:<MapPage/>
-    
+
     }
   }
   render(){
@@ -173,9 +204,14 @@ class App extends React.Component {
       view_page = this.state.faculty_second;
       right_button = this.state.right_button;
     }
-    else if(now_page === 'Instituties')
+    else if(now_page === 'InstituteFirst')
     {
-      view_page = this.state.instituties;
+      view_page = this.state.institute_first;
+      right_button = this.state.right_button;
+    }
+    else if(now_page === 'InstituteSecond')
+    {
+      view_page = this.state.institute_second;
       right_button = this.state.right_button;
     }
     else if (now_page === 'InfoPage')

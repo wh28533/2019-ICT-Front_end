@@ -1,0 +1,55 @@
+#Name{
+    position: absolute;
+    margin-top:3%;
+    left:5%;
+    color:white;
+    font-size:40pt;
+}
+.i2_buttons{
+    border-radius: 12px;
+    background-color:powderblue;
+    width: 120%;
+    height: 10%;
+    border-color: none;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-top: 3%;
+}
+.i2_not{
+    background-color: rgba(176,224,230,0.4);
+}
+#i2_button_pos{
+    position: absolute;
+    top: 30%;
+    left: 9%;
+}
+.i2_List_Pos{
+    position: absolute;
+    top: 40%;
+    right: 13%;
+    font-size: 150%;
+    line-height: 180%;
+    color: white;
+}
+
+#i2_institute_intro{
+    table-layout: fixed;
+    word-break: break-all;
+    background-color: rgba(176, 230, 218, 0.7);
+    width: 40%;
+    height: 20%;
+    border-radius: 12px;
+    position: absolute;
+    top: 20%;
+    right: 12%;
+    text-align: center;
+    color: white;
+    font-size: 120%;
+}
+.i2_department_text
+{
+    color: rgb(65, 10, 10);
+    font-weight: bold;
+}

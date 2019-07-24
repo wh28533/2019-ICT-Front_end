@@ -17,7 +17,7 @@ class FacultyFirst extends React.Component{
     
         componentDidMount()
         {
-                axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
+                axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').///http://127.0.0.1:8000/
                 then(res=>{
                     const faculty_load=res.data;
                     this.setState({

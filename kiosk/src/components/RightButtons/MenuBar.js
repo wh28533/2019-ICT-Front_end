@@ -40,7 +40,7 @@ class MenuBar extends React.Component {
             </button>
             <button onClick = {function(e){
                     e.preventDefault();
-                    this.props.onChangePage("Institutes");
+                    this.props.onChangePage("InstituteFirst");
                     
                 }.bind(this)}>
 
