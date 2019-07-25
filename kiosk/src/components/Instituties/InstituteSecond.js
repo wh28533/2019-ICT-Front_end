@@ -43,7 +43,7 @@ class InstituteSecond extends React.Component{
             const institute_load=res.data.about;
             this.setState({
                 departments: departments_load,
-                fauculty_info: institute_load
+                institute_info: institute_load
             });
         });
     }

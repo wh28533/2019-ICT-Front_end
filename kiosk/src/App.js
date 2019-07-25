@@ -129,6 +129,7 @@ class App extends React.Component {
       menu_bar:<MenuBar  onChangePage = {function(next_page){
 
         var new_page_storeage = this.state.page_storeage.slice();
+        alert(next_page);
         if (new_page_storeage[new_page_storeage.length - 1] === next_page)//같은페이지로 가는걸 눌렀으면
         {
           this.setState({

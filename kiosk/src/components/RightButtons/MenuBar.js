@@ -47,7 +47,11 @@ class MenuBar extends React.Component {
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/institutes.png")} alt = "Institutes"/>
                 <br/> <FormattedMessage id="InstitutesinMenu" defaultMassage="Institutes"/>
             </button>
-            <button >
+            <button onClick = {function(e){
+                    e.preventDefault();
+                    this.props.onChangePage("UnivInfoPage");
+                    
+                }.bind(this)}>
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/history.png")} alt = "History"/>
                 <br/><FormattedMessage id="KSTUinMenu" defaultMassage="KSTU"/>
             </button>

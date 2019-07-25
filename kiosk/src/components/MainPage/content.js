@@ -77,7 +77,7 @@ class content extends React.Component{
                     <button type="button" className="btn-light main_buttons" onClick = {function(e){
                     e.preventDefault();
                     this.props.onChangePage("UnivInfoPage");
-
+                    
                 }.bind(this)}>
                         <div className="main_icons" align='left'>
                             <img className="media-object" src={require( '../.././assets/image/Asset 3.png')} alt="History" width="20%"/>
