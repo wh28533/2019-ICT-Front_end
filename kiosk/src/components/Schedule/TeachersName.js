@@ -29,7 +29,7 @@ class TeachersName extends React.Component{
         alert("In Techers"+this.props.teacher_name)
         console.log("teacher id -:"+id)
 
-        axios.get('https://nameless-dusk-42348.herokuapp.com/en/schedule/teacher/'+id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/schedule/teacher/'+id).
         then(res=>{
             const T_Schedule=res.data;
             console.log("Teacher Schedule");
@@ -368,7 +368,7 @@ class TeachersName extends React.Component{
         <div>
             <div className={teacher_name}>
 
-                <div id='Teacher_Schedule_Name'>Professor List Title</div>
+                <div id='Teacher_Schedule_Name'><FormattedMessage id="Professor List Title" defaultMassage="Professor List Title"/></div>
                 <i className="fas fa-eye"></i>
 
                 <a href='#' onClick={function(e){

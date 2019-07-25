@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../../././assets/css/MenuBar.css';
 import '../../././assets/css/bootstrap.css';
+import {FormattedMessage} from "react-intl";
 
 
 class MenuBar extends React.Component {
@@ -20,7 +21,7 @@ class MenuBar extends React.Component {
                     
                 }.bind(this)}>
                 <img align = 'left' className = "menu_bar_icons" src = {require('../../././assets/image/map.png')} alt = "Map"/>
-                <br/>Map
+                <br/><FormattedMessage id="MapinMenu" defaultMassage="Map"/>
                 </button>
             <button onClick = {function(e){
                     e.preventDefault();
@@ -28,7 +29,7 @@ class MenuBar extends React.Component {
                     
                 }.bind(this)}>
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/schedule.png")} alt = "Schedule"/>
-                <br/>Schedule
+                <br/><FormattedMessage id="ScheduleinMenu" defaultMassage="Schedule"/>
             </button>
             <button onClick = {function(e){
                     e.preventDefault();
@@ -36,7 +37,7 @@ class MenuBar extends React.Component {
                     
                 }.bind(this)}>
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/faculties.png")} alt = "Faculties"/>
-                <br/>Faculties
+                <br/><FormattedMessage id="FacultiesinMenu" defaultMassage="Faculties"/>
             </button>
             <button onClick = {function(e){
                     e.preventDefault();
@@ -45,11 +46,11 @@ class MenuBar extends React.Component {
                 }.bind(this)}>
 
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/institutes.png")} alt = "Institutes"/>
-                <br/>Institutes
+                <br/> <FormattedMessage id="InstitutesinMenu" defaultMassage="Institutes"/>
             </button>
             <button >
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/history.png")} alt = "History"/>
-                <br/>History
+                <br/><FormattedMessage id="KSTUinMenu" defaultMassage="KSTU"/>
             </button>
             <button onClick = {function(e){
                     e.preventDefault();
@@ -57,7 +58,7 @@ class MenuBar extends React.Component {
                     
                 }.bind(this)}>
                 <img align = 'left' className = "menu_bar_icons" src = {require("../../././assets/image/info.png")} alt = "Information"/>
-                <br/>Information
+                <br/><FormattedMessage id="InformationinMenu" defaultMassage="Information"/>
             </button>
                 <table>
 

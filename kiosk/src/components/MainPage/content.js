@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormattedMessage,} from "react-intl";
-import '../../././assets/css/MainPage.css';
+import '../../././assets/css/MainPAge.css';
 import '../../././assets/css/bootstrap.css';
 
 class content extends React.Component{

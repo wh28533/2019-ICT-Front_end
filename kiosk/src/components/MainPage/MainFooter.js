@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../././assets/css/MainPage.css'
+import '../../././assets/css/MainPAge.css'
 
 class  MainFooter extends React.Component {
     constructor(props) {

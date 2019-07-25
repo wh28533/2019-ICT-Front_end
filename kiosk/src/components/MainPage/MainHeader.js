@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../.././assets/image/kstu_symbol.png'
 import {FormattedMessage,} from "react-intl";
 
-import '../../././assets/css/MainPage.css';
+import '../../././assets/css/MainPAge.css';
 import '../../././assets/css/bootstrap.css';
 
 const MainHeader = ()=>{

@@ -3,6 +3,7 @@ import React from 'react';
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/institute_second.css';
 import  axios from 'axios';
+import {FormattedMessage} from "react-intl";
 
 class InstituteSecond extends React.Component{
     constructor(props) {
@@ -111,7 +112,7 @@ class InstituteSecond extends React.Component{
         
         return(
             <div>             
-                <h1 id = 'Name'>Departments</h1>
+                <h1 className="Name"> <FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
             
                 {view_institutes}
         

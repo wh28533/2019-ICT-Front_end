@@ -114,7 +114,7 @@ class FacultySecond extends React.Component{
         
         return(
             <div>             
-                <h1 className="Name'"><FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
+                <h1 className="Name"><FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
             
                 {view_faculties}
         

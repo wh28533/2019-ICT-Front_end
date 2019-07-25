@@ -17,7 +17,7 @@ import UnivInfoPage from './components/UnivInfo/UnivInfoPage';
 import {IntlProvider} from "react-intl";
 import messages from "./Translations/Tranlatetions";
 import './assets/css/bootstrap.css';
-import '../src/assets/css/MainPage.css';
+import '../src/assets/css/MainPAge.css';
 
 
 import './App.css';
