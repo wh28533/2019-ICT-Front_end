@@ -5,6 +5,7 @@ import '../../././assets/css/faculty_second.css';
 import  axios from 'axios';
 
 import FacultyThird from './FacultyThird';
+import {FormattedMessage} from "react-intl";
 
 class FacultySecond extends React.Component{
     constructor(props) {
@@ -33,14 +34,14 @@ class FacultySecond extends React.Component{
             id = this.state.faculty_id;
         }
         alert(this.props.language);
-        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/').
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
         then(res=>{
             const faculty_load=res.data;
             this.setState({
                 faculties: faculty_load
             });
         });
-        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/'+id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+id).
         then(res=>{
             const departments_load=res.data.departments_of_faculty;
             const faculty_load=res.data.about;
@@ -113,7 +114,7 @@ class FacultySecond extends React.Component{
         
         return(
             <div>             
-                <h1 id = 'Name'>Departments</h1>
+                <h1 className="Name'"><FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
             
                 {view_faculties}
         

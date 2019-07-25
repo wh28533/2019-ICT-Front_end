@@ -455,7 +455,7 @@ Show=()=>{
         console.log(this.state.group_id)
     }
     TFaculty=()=>{
-        axios.get('https://nameless-dusk-42348.herokuapp.com/ru/faculty/').
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
         then(res=>{
             const tfaculties=res.data;
             console.log(res.data);
@@ -483,7 +483,7 @@ Show=()=>{
             t_faculty_id:id,
         })
         console.log("T Faculty id "+id);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/ru/faculty/'+id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+id).
         then(res=>{
             const tdepartments=res.data.departments_of_faculty;
             console.log(tdepartments);
@@ -522,7 +522,7 @@ Show=()=>{
             tdepartment_name:department_name,
 
         });
-        axios.get('https://nameless-dusk-42348.herokuapp.com/ru/department/'+id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+id).
         then(res=>{
             const teachers=res.data.teachers;
             console.log(res.data);

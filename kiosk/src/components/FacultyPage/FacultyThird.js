@@ -20,7 +20,7 @@ class FacultyThird extends React.Component
     
     componentDidMount()
     {
-        axios.get('http://127.0.0.1:8000/'+this.props.language+'/department/'+this.props.department_id).
+        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+this.props.department_id).
         then(res=>{
             const info_load = res.data.about;
             const professer_load=res.data.teachers;

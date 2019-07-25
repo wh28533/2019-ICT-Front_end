@@ -31,7 +31,7 @@ class InstituteSecond extends React.Component{
             id = this.state.institute_id;
         }
         alert(this.props.language);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/institute/').
+        axios.get('https://nameless-dusk-42348.herokuapp.com//'+this.props.language+'/institute/').
         then(res=>{
             const institute_load=res.data;
             this.setState({

@@ -1,5 +1,6 @@
 #info_background_width{
-    width: 95%
+    width: 105%;
+    margin: 0;
 }
 
 .Name{
@@ -15,29 +16,56 @@
     left: 2%;
 }
 .info_screen{
-    margin-bottom: 10%;
     margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .info_paragraph{
-    font-size: 100%;
+    font-size: 25px;
+    display: block;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
+    text-align: center;
     position: relative;
-    left:20%;
-    right: 30%;
-    margin-bottom: 15%
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
-.team_info{
-    font-size: 100%;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    left:20%;
-    right: 10%;
-    margin-bottom: 20%;
-}
+/*.team_info{*/
+/*    font-size: 100%;*/
+/*    color: white;*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*    position: relative;*/
+/*    left:20%;*/
+/*    !*right: 10%;*!*/
+/*    margin-bottom: 20%;*/
+/*}*/
 .info_bold{
     font-weight: bold;
     font-size: 110%;
+    text-align: left;
+}
+.row{
+    margin: 0;
+    padding: 0px;
+
+}
+.info_p{
+    /*border-right: 1px solid #b5b5b5;*/
+    color: white;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 0px;
+}
+.team_info{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 0px;
+    color: white;
+    padding-right: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.teams{
+    /*text-align: justify;*/
+
 }
