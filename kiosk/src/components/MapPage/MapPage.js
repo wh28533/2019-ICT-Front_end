@@ -87,14 +87,16 @@ class MapPage extends React.Component
                                 <a onClick = {function(e){
                                     e.preventDefault();
                                     this.setState({
-                                        bulding_num : '1'
+                                        bulding_num : '1',
+                                        floor_num:'Select'
                                     });
 
                                 }.bind(this)}>1st_building</a>
                                 <a onClick = {function(e){
                                     e.preventDefault();
                                     this.setState({
-                                        bulding_num : '2'
+                                        bulding_num : '2',
+                                        floor_num:'Select'
                                     });
 
                                 }.bind(this)}>2st_building</a>

@@ -11,7 +11,13 @@ class Schedule extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-
+            check_student_faculty : false,
+            check_student_department : false,
+            check_student_group : false,
+            
+            check_teacher_faculty : false,
+            check_teacher_department : false,
+            
             Faculties:[],
             TFaculties:[],
             faculty_name: '',
@@ -79,7 +85,6 @@ class Schedule extends React.Component{
              console.log(res.data);
             this.setState({
                 Faculties: faculties,
-                // T_Faculties:faculties
             });
         });
 
@@ -662,7 +667,9 @@ Show=()=>{
 
                                            e.preventDefault();
                                            this.setState({
-                                               faculty_name:faculty.name
+                                               faculty_name:faculty.name,
+                                               check_student_faculty : true
+
                                            })
                                            this.Faculty_id(faculty.id,faculty.name);
                                            this.componentDidMount(faculty.id,);
@@ -682,6 +689,10 @@ Show=()=>{
                                                e.preventDefault();
                                                this.department_id(department.id,department.name);
                                                this.Groups_name(department.id);
+                                               this.setState({
+                                                check_student_department : true
+ 
+                                            })
                                            }.bind(this)}>
                                                {department.name  }  </a>)}
 
@@ -699,6 +710,11 @@ Show=()=>{
 
                                                    this.Group_id(groups.id,groups.name);
                                                    this.Shedule(groups.id);
+
+                                                   this.setState({
+                                                    check_student_group : true
+     
+                                                })
                                                }.bind(this)}>
                                                    {groups.name  }  </a>)}
 
@@ -713,11 +729,13 @@ Show=()=>{
                        <button className={StudentSubmit}   onClick = {function(e){
 
                            e.preventDefault();
-
-                           this.setState({
+                           if(this.state.check_student_faculty === true && this.state.check_student_department === true && this.state.check_student_group === true) 
+                           {
+                               this.setState({
                                check_shedule:true,
 
-                           });
+                                });
+                            }
                        }.bind(this)}>
                            <FormattedMessage id="StudentSubmit" defaultMassage="View schedule" />  </button>
                      </div>
@@ -744,7 +762,10 @@ Show=()=>{
 
                                             e.preventDefault();
                                             this.T_Faculty_id(faculty.id,faculty.name);
-                                            // this.componentDidMount(faculty.id,);
+                                            this.setState({
+                                                check_teacher_faculty : true
+ 
+                                            })
                                         }.bind(this)}>
                                             {faculty.name  }  </a>)}
                                 </div>
@@ -759,7 +780,10 @@ Show=()=>{
                                             e.preventDefault();
                                             this.Tdepartment_id(tdepartment.id,tdepartment.name);
                                             // this.Groups_name(tdepartment.id);
-                                            console.log(tdepartment.name)
+                                            this.setState({
+                                                check_teacher_department : true
+ 
+                                            })
                                         }.bind(this)}>
                                             {tdepartment.name  }  </a>)}
 
@@ -769,10 +793,13 @@ Show=()=>{
                                 <button className="dropbtn" onClick = {function(e){
 
                                     e.preventDefault();
-                                    this.setState({
-                                        check_tName:true,
+                                    if(this.state.check_teacher_department=== true && this.state.check_teacher_faculty === true)
+                                    {
+                                        this.setState({
+                                            check_tName:true,
 
-                                    });
+                                        });
+                                    }
                                 }.bind(this)} ><FormattedMessage id="TeacherScheduleTName" defaultMassage="Teacher's name"/></button>
                             </div>
 

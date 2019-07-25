@@ -33,7 +33,11 @@ class Department extends React.Component{
                 <table border="2" className = "schedule_table">
                     <th ><span id="day"><FormattedMessage id="day" defaultMassage="day"/></span><br/>
                         <span id="day"><FormattedMessage id="time" defaultMassage="time"/></span></th>
+
                         <th id="Time"><FormattedMessage id="Mon" defaultMassage="Mon"/></th>
+
+                    <th id="Time"><FormattedMessage id="Mon" defaultMassage="Mon"/></th>
+
                     <th id="Time"><FormattedMessage id="Tue" defaultMassage="Tue"/></th>
                     <th id="Time"><FormattedMessage id="Wed" defaultMassage="Wed"/></th>
                     <th id="Time"><FormattedMessage id="Thu" defaultMassage="Thu"/></th>

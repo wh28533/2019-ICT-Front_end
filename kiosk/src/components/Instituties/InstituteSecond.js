@@ -110,8 +110,8 @@ class InstituteSecond extends React.Component{
         
         return(
             <div>             
-                <h1 id = 'Name'> <FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
-            
+                <h1 className="Name"> <FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
+
                 {view_institutes}
         
                 <table id = 'i2_institute_intro'>
