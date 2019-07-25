@@ -26,10 +26,10 @@ class TeachersName extends React.Component{
     }
 
     Tch_Schedule(id) {
-        alert("In Techers"+this.props.teacher_name)
+     //   alert("In Techers"+this.props.teacher_name)
         console.log("teacher id -:"+id)
 
-        axios.get('https://nameless-dusk-42348.herokuapp.com/en/schedule/teacher/'+id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/schedule/teacher/'+id).
         then(res=>{
             const T_Schedule=res.data;
             console.log("Teacher Schedule");
@@ -167,7 +167,7 @@ class TeachersName extends React.Component{
 
         var i
         for (i=1;i<7;i++){
-            if( time1["day_of_week"+i].length==0){
+            if( time1["day_of_week"+i].length===0){
                 time1["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -194,7 +194,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time2["day_of_week"+i].length==0){
+            if( time2["day_of_week"+i].length===0){
                 time2["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -221,7 +221,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time3["day_of_week"+i].length==0){
+            if( time3["day_of_week"+i].length===0){
                 time3["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -248,7 +248,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time4["day_of_week"+i].length==0){
+            if( time4["day_of_week"+i].length===0){
                 time4["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -275,7 +275,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time5["day_of_week"+i].length==0){
+            if( time5["day_of_week"+i].length===0){
                 time5["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -302,7 +302,7 @@ class TeachersName extends React.Component{
                     }
                 }]
             }
-            if( time6["day_of_week"+i].length==0){
+            if( time6["day_of_week"+i].length===0){
                 time6["day_of_week"+i]=[{"day_of_week": '',
                     "subject": {
                         "name": " "
@@ -365,7 +365,7 @@ class TeachersName extends React.Component{
         var cansel=this.state.cansel ? "none":"DisplayBlock"
 
         return(
-        <div>
+        <div >
             <div className={teacher_name}>
 
                 <div id='Teacher_Schedule_Name'>Professor List Title</div>

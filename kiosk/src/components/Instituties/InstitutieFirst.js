@@ -17,7 +17,7 @@ class InstituteFirst extends React.Component{
     
         componentDidMount()
         {
-                axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/institute/').
+                axios.get('http://127.0.0.1:8000/'+this.props.language+'/institute/').
                 then(res=>{
                     const institutes_load=res.data;
                     this.setState({
@@ -36,7 +36,6 @@ class InstituteFirst extends React.Component{
                     { this.state.institutes.map(institute => <div>
                         <button className="i1_buttons" type="button" onClick = {function(e){
                             e.preventDefault();
-                            alert(institute.id);
                           this.props.onChangePage(institute.id);
                         }.bind(this)} >
                             <pre>{institute.name}</pre>

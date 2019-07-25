@@ -6,7 +6,7 @@ import '../../././assets/css/bootstrap.css';
 class content extends React.Component{
     render(){
     return (
-        <div>
+        <div className = 'main_screen_size'>
         <div className ="main_buttons_location">
         <div className="row">
             <div className="col-lg-1">

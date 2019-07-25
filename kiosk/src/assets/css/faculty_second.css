@@ -1,4 +1,4 @@
-.Name{
+#Name{
     position: absolute;
     margin-top:3%;
     left:5%;
@@ -28,7 +28,7 @@
 .f2_List_Pos{
     position: absolute;
     top: 40%;
-    right: 13%;
+    left: 52%;
     font-size: 150%;
     line-height: 180%;
     color: white;
@@ -45,11 +45,14 @@
     top: 20%;
     right: 12%;
     text-align: center;
+    vertical-align: middle;
     color:black;
     font-size: 1.2vmin;
+    font-weight: bold;
+    padding: 2%;
 }
 .f2_department_text
 {
-    color: rgb(65, 10, 10);
+    color: whitesmoke;
     font-weight: bold;
 }

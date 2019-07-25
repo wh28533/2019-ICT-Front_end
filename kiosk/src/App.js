@@ -253,7 +253,6 @@ class App extends React.Component {
         {view_page}
         {right_button}
         {menu_bar}
-        {alert(this.state.page_storeage)}
       </div>
         </IntlProvider>
   );

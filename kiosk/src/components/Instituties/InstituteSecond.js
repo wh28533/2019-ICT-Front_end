@@ -1,9 +1,9 @@
 import React from 'react';
-
+import FacultyThird from '../FacultyPage/FacultyThird';
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/institute_second.css';
 import  axios from 'axios';
-
+import {FormattedMessage} from "react-intl";
 class InstituteSecond extends React.Component{
     constructor(props) {
         
@@ -30,15 +30,14 @@ class InstituteSecond extends React.Component{
         {
             id = this.state.institute_id;
         }
-        alert(this.props.language);
-        axios.get('https://nameless-dusk-42348.herokuapp.com//'+this.props.language+'/institute/').
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/institute/').
         then(res=>{
             const institute_load=res.data;
             this.setState({
                 institutes: institute_load
             });
         });
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/institute/'+id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/institute/'+id).
         then(res=>{
             const departments_load=res.data.departments_of_institute;
             const institute_load=res.data.about;
@@ -83,19 +82,19 @@ class InstituteSecond extends React.Component{
                 }
         </div>;
 
-        view_departments = 
+        view_departments =
+        <table className = "i2_Table_Pos">
         <ul type="none" className = "i2_List_Pos">
         { this.state.departments.map(department => 
                         
                         <li><a onClick = {function(e){
                             
                             e.preventDefault();
-                            alert(department.id);
                             var t_language = this.props.language;
                             this.setState({
                                 check_institute_third:true,
                                
-                                institute_third : <instituteThird department_id = {department.id} language = {t_language} onChangePage = {function(){
+                                institute_third : <FacultyThird department_id = {department.id} language = {t_language} onChangePage = {function(){
                                     this.setState({
                                         check_institute_third:false
                                     });
@@ -105,20 +104,20 @@ class InstituteSecond extends React.Component{
                         }.bind(this)}>
                         <div className = "i2_department_text">{department.name}</div></a></li>
                     )}
-        </ul>;
+        </ul></table>;
 
         view_institute_third = this.state.check_institute_third ? this.state.institute_third: '';
         
         return(
             <div>             
-                <h1 id = 'Name'>Departments</h1>
+                <h1 id = 'Name'> <FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
             
                 {view_institutes}
         
                 <table id = 'i2_institute_intro'>
-                <tr>
+                <tr><td>
                 {this.state.institute_info}
-                </tr>
+                </td></tr>
                 </table>
                 {view_departments}
                 {view_institute_third}

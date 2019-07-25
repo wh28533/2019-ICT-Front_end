@@ -29,16 +29,7 @@
     background-color: rgba(192,192,192,0.8);
     border-radius: 18px;
 }
-.f3_department_name{
-    text-align: center;
-    color: brown;
-    font-size: larger;
-    height: 30%;
-}
-.f3_department_info{
-    vertical-align: top;
-    text-align: center;
-}
+
 .Teacher_Name_Card{
     position: relative;
     float: left;
@@ -91,7 +82,7 @@
     word-break: break-all;
     background-color: rgba(176, 230, 218, 0.7);
     width: 40%;
-    height: 15%;
+    height: 120px;
     border-radius: 12px;
     position: absolute;
     top: 6%;
@@ -99,6 +90,24 @@
     z-index: 2;
     color: black;
     font-size: 70%;
+    display: block;
+}
+.f3_department_name{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    color: brown;
+    font-weight: bold;
+    font-size: 170%;
+}
+.f3_department_info{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    vertical-align: middle;
+    text-align: center;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
 #New_screen_for_department{

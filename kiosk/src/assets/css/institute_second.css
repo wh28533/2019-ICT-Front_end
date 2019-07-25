@@ -25,10 +25,13 @@
     top: 40%;
     left: 4.5%;
 }
-.i2_List_Pos{
+.i2_Table_Pos{
     position: absolute;
     top: 40%;
-    right: 13%;
+    left: 50%;
+    align-content: center;
+}
+.i2_List_Pos{
     font-size: 150%;
     line-height: 180%;
     color: white;
@@ -45,11 +48,13 @@
     top: 20%;
     right: 12%;
     text-align: center;
+    vertical-align: middle;
     color: white;
-    font-size: 120%;
+    font-size: 1.2vmin;
+    font-weight: bold;
 }
 .i2_department_text
 {
-    color: rgb(65, 10, 10);
+    color: whitesmoke;
     font-weight: bold;
 }

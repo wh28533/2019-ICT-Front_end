@@ -33,15 +33,14 @@ class FacultySecond extends React.Component{
         {
             id = this.state.faculty_id;
         }
-        alert(this.props.language);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/').
         then(res=>{
             const faculty_load=res.data;
             this.setState({
                 faculties: faculty_load
             });
         });
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/'+id).
         then(res=>{
             const departments_load=res.data.departments_of_faculty;
             const faculty_load=res.data.about;
@@ -93,7 +92,6 @@ class FacultySecond extends React.Component{
                         <li><a onClick = {function(e){
                             
                             e.preventDefault();
-                            alert(department.id);
                             var t_language = this.props.language;
                             this.setState({
                                 check_faculy_thired:true,
@@ -114,14 +112,14 @@ class FacultySecond extends React.Component{
         
         return(
             <div>             
-                <h1 className="Name'"><FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
+                <h1 id = 'Name'><FormattedMessage id="Departments" defaultMassage="Departments"/></h1>
             
                 {view_faculties}
         
                 <table id = 'f2_Faculty_intro'>
-                <tr>
+                <tr><td>
                 {this.state.fauculty_info}
-                </tr>
+                </td></tr>
                 </table>
                 {view_departments}
                 {view_faculty_third}

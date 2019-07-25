@@ -20,7 +20,7 @@ class FacultyThird extends React.Component
     
     componentDidMount()
     {
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+this.props.department_id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/department/'+this.props.department_id).
         then(res=>{
             const info_load = res.data.about;
             const professer_load=res.data.teachers;
@@ -40,7 +40,7 @@ class FacultyThird extends React.Component
          <div id = 'New_screen_for_department'></div>
 
 <table id = 'Department_Intro'>
-    <tr className  = "f3_department_name" ><td >{this.state.department_name}</td></tr>
+    <tr className  = "f3_department_name"><td>{this.state.department_name}</td></tr>
     <tr className = "f3_department_info"><td>{this.state.department_info}</td></tr>
 </table>
 
@@ -62,6 +62,7 @@ class FacultyThird extends React.Component
     </td> 
 </tr>
 <tr className = "f3_tr2"><td >{professer.name}</td></tr>
+<tr className = "f3_tr3"><td >{professer.status}</td></tr>
 <tr className = "f3_tr3"><td >{professer.contact}</td></tr>
 
 </table>)}

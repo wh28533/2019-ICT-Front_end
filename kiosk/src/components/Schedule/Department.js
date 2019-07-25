@@ -24,7 +24,6 @@ class Department extends React.Component{
     }
 
     componentDidMount() {
-           alert(this.props.time2.day_of_week1[0].subject.name)
     }
     render(){
 
@@ -34,12 +33,12 @@ class Department extends React.Component{
                 <table border="2" className = "schedule_table">
                     <th ><span id="day"><FormattedMessage id="day" defaultMassage="day"/></span><br/>
                         <span id="day"><FormattedMessage id="time" defaultMassage="time"/></span></th>
-                    <th id="Time">Mon</th>
-                    <th id="Time">Tue</th>
-                    <th id="Time">Wed</th>
-                    <th id="Time">Thu</th>
-                    <th id="Time">Fri</th>
-                    <th id="Time">Sat</th>
+                        <th id="Time"><FormattedMessage id="Mon" defaultMassage="Mon"/></th>
+                    <th id="Time"><FormattedMessage id="Tue" defaultMassage="Tue"/></th>
+                    <th id="Time"><FormattedMessage id="Wed" defaultMassage="Wed"/></th>
+                    <th id="Time"><FormattedMessage id="Thu" defaultMassage="Thu"/></th>
+                    <th id="Time"><FormattedMessage id="Fri" defaultMassage="Fri"/></th>
+                    <th id="Time"><FormattedMessage id="Sat" defaultMassage="Sat"/></th>
                     <tr>
                         <td id="Time" className = "schedule_td">8:00 - 9:20</td>
                         <td href="#"> { this.props.time1.day_of_week1.map(day_of_week1 =>

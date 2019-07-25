@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../././assets/css/bootstrap.css';
 import '../../././assets/css/ProfessorList.css';
-
+import {FormattedMessage} from "react-intl";
 class ProfessorList extends React.Component
 {
     constructor(props)
@@ -14,7 +14,7 @@ class ProfessorList extends React.Component
             <div>
                 <div id = 'New_screen_for_department'></div>
 
-<div id = 'Teacher_Schedule_Name'>Professor List Title</div>
+                <div id = 'Teacher_Schedule_Name'><FormattedMessage id="Professor List Title" defaultMassage="Professor List Title"/></div>
 
 <div id = 'Teacher_page_num'>- 1 -</div>
 

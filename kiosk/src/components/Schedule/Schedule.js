@@ -73,8 +73,7 @@ class Schedule extends React.Component{
             faculty_id= this.state.faculty_id;
             // department_id= this.state.department_id;
         }
-        alert('언어'+this.props.language);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/').
         then(res=>{
             const faculties=res.data;
              console.log(res.data);
@@ -85,7 +84,7 @@ class Schedule extends React.Component{
         });
 
         console.log("Faculty id "+this.state.faculty_id);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+faculty_id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/'+faculty_id).
         then(res=>{
             const departments=res.data.departments_of_faculty;
              console.log("departments "+res.data);
@@ -102,7 +101,7 @@ class Schedule extends React.Component{
     }
     Groups_name (department_id){
         console.log("department_id "+department_id);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+department_id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/department/'+department_id).
         then(res=>{
             const groups=res.data.groups;
             console.log(res.data);
@@ -114,7 +113,7 @@ class Schedule extends React.Component{
 
 
      Shedule =(groups_id)=> {
-         axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/schedule/group/' + groups_id).then(res => {
+         axios.get('http://127.0.0.1:8000/'+this.props.language+'/schedule/group/' + groups_id).then(res => {
              const shedule_load = res.data;
              this.setState({
                  sсhedule: shedule_load
@@ -455,7 +454,7 @@ Show=()=>{
         console.log(this.state.group_id)
     }
     TFaculty=()=>{
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/').
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/').
         then(res=>{
             const tfaculties=res.data;
             console.log(res.data);
@@ -483,7 +482,7 @@ Show=()=>{
             t_faculty_id:id,
         })
         console.log("T Faculty id "+id);
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/faculty/'+id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/faculty/'+id).
         then(res=>{
             const tdepartments=res.data.departments_of_faculty;
             console.log(tdepartments);
@@ -522,7 +521,7 @@ Show=()=>{
             tdepartment_name:department_name,
 
         });
-        axios.get('https://nameless-dusk-42348.herokuapp.com/'+this.props.language+'/department/'+id).
+        axios.get('http://127.0.0.1:8000/'+this.props.language+'/department/'+id).
         then(res=>{
             const teachers=res.data.teachers;
             console.log(res.data);

@@ -36,17 +36,30 @@ export default {
         "TeacherScheduleFaculty":"Faculty",
         "TeacherScheduleTName":"Teacher's name",
 
+        "Mon": "Monday",
+        "Tue": "Tuesday",
+        "Wed": "Wednesday",
+        "Thu": "Thursday",
+        "Fri": "Friday",
+        "Sat": "Saturday",
         "TDepartment":"Department",
+        "Professor List Title":"Professor List Title",
 
         // /*********************************Map Menu**********************************************/
         "Building Number":"Building Number",
         "Floor Number":"Floor Number",
         "MapSubmit":"View Map",
+        "View all map":"View all map",
 
 
 // /*********************************Faculty Page**********************************************/
         "Departments":"Departments",
         "Faculties":"Faculties",
+
+        // /*********************************Instities Page**********************************************/
+
+        "Institute":"Institute",
+
 
         // /*********************************information page**********************************************/
         "info_paragraph":"How is used the this application?",
@@ -77,7 +90,42 @@ export default {
         "Team from SKKU:":"Team from SKKU:",
         "Team from KSTU:":"Team from KSTU:",
         "Team from MANAS University:":"Team from MANAS University:",
-    },
+        //******************************************************about KSTU information page************************************************/
+
+        "about KSTU":"It began in 1953, when, due to the acute shortage of highly qualified specialists in the engineering industry of Kyrgyzstan, a technical faculty was established at Kyrgyz State University.\n" +
+            "    Created on September 1, 1954, as the Frunze Polytechnic Institute. The first rector of FPI was Professor George Akimovich Sukhomlinov.\n" +
+            "    The training of future engineers was carried out by 12 faculties in 60 departments, where 13 thousand students studied in 26 specialties, 350 teachers (200 - with academic degrees and titles).\n" +
+            "    FPI has become a forge for training highly qualified personnel for industry and construction of the Kirghiz SSR and the entire Central Asian region.\n" +
+            "    For the successes achieved in the preparation of highly qualified personnel, a team of FPI among the 26 best universities in the country in honor of the 50th anniversary of the USSR\n" +
+            "    was awarded the Jubilee Medal of the CPSU Central Committee, Presidium of the USSR Supreme Council, USSR Council of Ministers and the All-Union Central Council of Trade Unions.\n" +
+            "    Since 1992 - KSTU. I. Razzakov. Now the university is a modern university complex, the largest educational and scientific center for training and retraining of engineering, engineering and economic personnel in 77 specialties.\n" +
+            "    KSTU owns innovative technologies and introduces the latest educational programs. The university has more than 19 thousand students who want to get a higher and secondary special education, as well as about 200 students of the Lyceum and more than 190 graduate students and applicants.\n" +
+            "  ",
+            "Former names" :"Former names: Frunze Polytechnic Institute",
+            "Year of foundation":"Year of foundation: 1954",
+            "Year of reorganization":"Year of reorganization: 1992 type of state",
+            "Rector":"Rector: De Vyacheslav Alekseevich",
+            "Students" :"Students: over 19,000",
+            "Doctors":"Doctors: more than 50",
+            "Teachers":"Teachers: about 1000",
+            "Location":"Location: Kyrgyzstan, Bishkek",
+            "Legal address":"Legal address: 720044 Kyrgyzstan, Bishkek, Mira Ave. 66",
+            "Website":"Website: kstu.kg",
+        "General knowledge about KSTU":"General knowledge about KSTU",
+
+
+
+},
+
+
+
+
+
+
+
+
+
+
     ru:{
         "named after I.Razzakov":"Кыргызский Государственный Технический Университет им. И. Раззакова ",
         "Welcome to KSTU":"Добро пожаловать в",
@@ -111,13 +159,32 @@ export default {
         "Teacher's Scheduler Menu Title":"расписание учителей",
         "TeacherSubmit":"Посмотреть расписание",
 
+
+        // /
+        "TeacherScheduleFaculty":"Факультеты",
+        "TeacherScheduleTName":"Имя Учителя",
+
+        "TDepartment":"Кафедра",
+        "Professor List Title":"имя учителя",
+
+        "Mon":"понедельник",
+        "Tue":"вторник",
+        "Wed":"среда",
+        "Thu":"Четверг",
+        "Fri":"пятница",
+        "Sat":"суббота",
         // /*********************************Map Menu**********************************************/
         "Building Number":"Номер здания",
         "Floor Number":"Номер этажа",
         "MapSubmit":"Посмотреть карту",
+        "View all map":"Посмотреть всю карту",
 // /*********************************Faculty Page**********************************************/
         "Departments":"Кафедры",
         "Faculties":"Факультеты",
+
+        // /*********************************Instities Page**********************************************/
+
+        "Institute":"Институты",
 
         // /*********************************information page**********************************************/
         "info_paragraph":"Как используется это приложение?",
@@ -141,6 +208,39 @@ export default {
         "Team from SKKU:":"Team from SKKU:",
         "Team from KSTU:":"Team from KSTU:",
         "Team from MANAS University:":"Team from MANAS University:",
+        //******************************************************about KSTU information page************************************************/
+
+        "about KSTU":"Кыргызский государственный технический университет - Исхак имени государственного технического университета Кыргызстана, Киргизии , первого технического высшего учебного заведения.\n" +
+            "Берёт своё начало в 1953 году, когда в связи с острой нехваткой высококвалифицированных специалистов в инженерной отрасли Киргизии, был создан технический " +
+            "факультет при Киргизском государственном университете." +
+            " Создан 1 сентября 1954 года, как Фрунзенский политехнический институт. " +
+            "Первым ректором ФПИ стал профессор Георгий Акимович Сухомлинов.\n" +
+            "Подготовка будущих инженеров осуществлялась 12 факультетами на 60 кафедрах, " +
+            "где обучались 13 тысяч студентов по 26 специальностям, 350 преподавателями " +
+            "(200 — с учеными степенями и званиями). ФПИ стал кузницей подготовки высококвалифицированных кадров для " +
+            "промышленности и строительства Киргизской ССР и всего среднеазиатского региона.\n" +
+            "\n" +
+            " С 1992 — КГТУ им. И. Раззакова. Ныне университет это современный университетский комплекс, крупнейший учебно-научный центр подготовки и переподготовки инженерно-технических и инженерно-экономических кадров по 77 специальностям.\n" +
+            "\n" +
+            " КГТУ владеет инновационными технологиями и внедряет новейшие образовательные программы. В университете обучаются более 19 тысяч студентов, желающих получить высшее и среднее специальное образование, а также около 200 учащихся лицея и более 190 аспирантов и соискателей.  \n" +
+            "\n" +
+            "В составе КГТУ 14 структурных подразделений, около 1000 человек профессорско-преподавательского состава, " +
+            "из которых более 50 докторов наук и более 220 кандидатов наук, 36 академиков и членов-корреспондентов" +
+            " ряда государственных и международных академий, в том числе и НАН Кыргызской Республики. КГТУ это 14 учебных корпусов," +
+            " 50 компьютерных классов, библиотечно-информационный центр.",
+
+        "Former names" :"Прежние имена: Фрунзенский политехнический институт",
+        "Year of foundation":"Год основания: 1954",
+        "Year of reorganization":"Год реорганизации: 1992 тип государства",
+        "Rector":"Ректор: Де Вячеслав Алексеевич",
+        "Students" :"Студенты: более 19 000",
+        "Doctors":"Докторы:более 50",
+        "Teachers":"Учителя: около 1000",
+        "Legal address":"Адрес:  720044 Кыргызстан, Бишкек, пр. Мира, 66",
+        "Website":"Веб-сайт: kstu.kg",
+        "KSTU":"КГТУ",
+        "General knowledge about KSTU":"Общие знания о КГТУ",
+
 
     },
     kg:{
@@ -174,14 +274,31 @@ export default {
 
         "Teacher's Scheduler Menu Title":"Мугалимдин расписаниеси ",
         "TeacherSubmit":"Расписаниени коруу",
+        "TeacherScheduleFaculty":"Факультеттер",
+        "TeacherScheduleTName":"Мугалимдин аты",
+
+        "TDepartment":"Болуму",
+
+        "Mon":"Дуйшонбу",
+        "Tue":"Шейненби",
+        "Wed":"Шаршенби",
+        "Thu":"Бейшенби",
+        "Fri":"Жума",
+         "Sat":"Ийшенби",
+        "Professor List Title":"Мугалимдердин аты-жону",
         // /*********************************Map Menu**********************************************/
         "Building Number":"Имараттын номери",
         "Floor Number":"Кабаттын номери",
         "MapSubmit":"Картасын коруу",
+        "View all map":"Толук картаны коруу",
 
 // /*********************************Faculty Page**********************************************/
         "Departments":"Болумдор",
         "Faculties":"Факультетер",
+
+        // /*********************************Instities Page**********************************************/
+
+        "Institute":"Институттар",
 
         // /*********************************information page**********************************************/
         "info_paragraph":"Бул программа кандай колдонулат ?",
@@ -210,5 +327,27 @@ export default {
         "Team from SKKU:":"SKKU Университетинин командасы:",
         "Team from KSTU:":"Политех Университетинин командасы:",
         "Team from MANAS University:":"Манас Университетинин командасы:",
+
+        //******************************************************about KSTU information page************************************************/
+
+        "about KSTU":" Исхак Раззаков атындагы Кыргыз Мамлекеттик Техникалык Университети - Кыргызстандагы туңгуч техникалык жогорку окуу жайы." +
+           " 1954-жылы Фрунзе (азыркы Бишкек) шаарында Фрунзедеги Политехникалык Институт катары түзүлгөн.\n" +
+            "  1992-жылдын августуна чейин Фрунзе Политехникалык Институту, Бишкек Политехникалык Институту деп аталып келген.\n" +
+            "Алгачкы ректору Георгий Акимович Сухомлинов. ",
+
+        "Former names" :"Мурдагы аты: Фрунзе Техникалык Институту",
+        "Year of foundation":"Курулган жылы : 1954",
+        "Year of reorganization":"Год реорганизации: 1992 тип государства",
+        "President":"President: Nurakunov Sarcdar Anvarovih",
+        "Rector":"Ректору: Де Вячеслав Алексеевич",
+        "Students" :"Студенттери: 19 000дон ашуу ",
+        "Doctors":"Доктор мугалимдери: 50 дон ашуу",
+        "Teachers":"Мугалимдери: 1000 жакын",
+        "Legal address":"Адреси:  720044 Кыргызстан, Бишкек, пр. Мира, 66",
+        "Website":"Веб-сайты: kstu.kg",
+        "KSTU":"КМТУ",
+        "General knowledge about KSTU":"КМТУ жөнүндө жалпы билим"
+
+
     },
 }

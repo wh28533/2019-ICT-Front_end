@@ -30,15 +30,7 @@
     margin-bottom: 0px;
     margin-top: 10px;
 }
-/*.team_info{*/
-/*    font-size: 100%;*/
-/*    color: white;*/
-/*    font-family: Arial, Helvetica, sans-serif;*/
-/*    position: relative;*/
-/*    left:20%;*/
-/*    !*right: 10%;*!*/
-/*    margin-bottom: 20%;*/
-/*}*/
+
 .info_bold{
     font-weight: bold;
     font-size: 110%;
@@ -65,7 +57,3 @@
     font-size: 16px;
 }
 
-.teams{
-    /*text-align: justify;*/
-
-}

@@ -26,10 +26,20 @@
     height: auto;
 }
 
-#main_language_block {
+#main_language_en {
     position: absolute;
     bottom: 2%;
-    text-align: right;
+    right: 10%;
+    width: 10%;
+    height: auto;
+}
+
+#main_language_ru {
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+    width: 8%;
+    height: auto;
 }
 
 #main_contact {
@@ -39,8 +49,12 @@
 }
 
 .main_buttons {
+    width: 93%;
+    height: 98%;
     max-width: 93%;
     max-height: 98%;
+    min-width: 93%;
+    min-height: 98%;
     border-radius: 12px;
     border: none;
     font-size: 140%;
@@ -60,13 +74,9 @@
     margin-left: 8%;
 }
 
-.main_lang_icon {
-    width: 8%;
-    height: 8%;
-}
 .main_rr{
     list-style: none;
 }
 .main_screen_size{
-    max-width:95%;
+    overflow-x: hidden;
 }
