@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../././assets/css/MainPage.css'
+import {FormattedMessage,} from "react-intl";
 
 class  MainFooter extends React.Component {
     constructor(props) {
@@ -12,10 +13,10 @@ class  MainFooter extends React.Component {
         return (
             <footer className = "main_screen_size">
                 <ul id="main_contact" className="main_rr">
-                    <li>Reception: +996 (312) 545 162</li>
-                    <li>Fax: +996 (312) 545 162</li>
-                    <li>e-mail: rector@kstu.kg</li>
-                    <li>website: www.kstu.kg</li>
+                    <li><FormattedMessage id="Reception" defaultMassage="Reception"/>: +996 (312) 545 162</li>
+                    <li><FormattedMessage id="Fax" defaultMassage="Fax"/>: +996 (312) 545 162</li>
+                    <li>E-mail: rector@kstu.kg</li>
+                    <li><FormattedMessage id="Website" defaultMassage="Website"/>: www.kstu.kg</li>
                 </ul>
                 <div>
                     <a onClick={function (e) {

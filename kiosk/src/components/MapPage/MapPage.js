@@ -60,7 +60,7 @@ class MapPage extends React.Component
                 this.setState({
                     floor_num : String(i)
                 });
-            }.bind(this)}>{i} building</a>);
+            }.bind(this)}>{i} <FormattedMessage id="Floor" defaultMassage="Floor"/></a>);
         }
         
         return (
@@ -91,7 +91,7 @@ class MapPage extends React.Component
                                         floor_num:'Select'
                                     });
 
-                                }.bind(this)}>1st_building</a>
+                                }.bind(this)}>1_<FormattedMessage id="Building" defaultMassage="Building"/></a>
                                 <a onClick = {function(e){
                                     e.preventDefault();
                                     this.setState({
@@ -99,7 +99,7 @@ class MapPage extends React.Component
                                         floor_num:'Select'
                                     });
 
-                                }.bind(this)}>2st_building</a>
+                                }.bind(this)}>2_<FormattedMessage id="Building" defaultMassage="Building"/></a>
                             </div>
                         </div>
 

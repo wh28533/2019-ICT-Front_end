@@ -87,8 +87,8 @@ class InfoPage extends React.Component{
 
                             </p>
                             <p>  <FormattedMessage id="Team from SKKU:" defaultMassage=" Team from SKKU:"/><br/> Hera Koo, 구헤라. Doyoon Yoon, 윤도윤. Woojin Jun, 전우진. Hyunjun Ahn, 안현준. <br/> Hayoung Cho, 조하영. Songchan Jin, 진송찬. Seonggyu Choi, 최성규. <br/></p>
-                            <p>  <FormattedMessage id="Team from MANAS University:" defaultMassage="Team from MANAS University:"/><br/></p>
-                            <p>  <FormattedMessage id="Team from KSTU:" defaultMassage="Team from KSTU:"/><br/></p>
+                            <p>  <FormattedMessage id="Team from MANAS University:" defaultMassage="Team from MANAS University: Ainil Kemelova , Аizada Aripzhanova ,Albina" /> <br/></p>
+                            <p>  <FormattedMessage id="Team from KSTU:" defaultMassage="Team from KSTU: Irina Romanceva, Dinara Mendybaeva"/><br/></p>
                             </div>
 
                         </div>

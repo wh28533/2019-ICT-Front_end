@@ -655,7 +655,7 @@ Show=()=>{
                                check_tName:false,
 
                            });
-                       }.bind(this)} ><FormattedMessage id="Studen's Scheduler Menu Title" defaultMassage="student schedule"/>  </button>
+                       }.bind(this)} ><FormattedMessage id="Studen's Scheduler Menu Title" defaultMassage="Student Schedule"/>  </button>
                        <div className={StudentButtons}>
                            <div className="dropdown" onClick={this.ChangeFalClassname.bind(this)} >
 

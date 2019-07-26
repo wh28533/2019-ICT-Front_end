@@ -10,9 +10,9 @@
 #Teacher_List_Pos{
     position: absolute;
     top: 23%;
-    right: 26%;
+    left:25%;
     z-index: 1;
-    width: 48%;
+    width: 50%;
     height: 60%;
     overflow-x:hidden;
     overflow-y:scroll;

@@ -28,12 +28,10 @@ class UnivInfoPage extends React.Component
     <ol><tr><th><FormattedMessage id="Year of foundation" defaultMassage="Year of foundation: 1954"/></th> </tr></ol>
     <ol><tr><th><FormattedMessage id="Year of reorganization" defaultMassage="Year of reorganization: 1992
     type of state"/></th></tr></ol>
-    <ol><tr><th><FormattedMessage id="President" defaultMassage="President: Nurakunov Sarcdar Anvarovih"/></th></tr></ol>
     <ol><tr><th><FormattedMessage id="Rector" defaultMassage="Rector: De Vyacheslav Alekseevich"/></th></tr></ol>
     <ol><tr><th><FormattedMessage id="Students" defaultMassage="Students: over 19,000"/></th></tr></ol>
     <ol><tr><th><FormattedMessage id="Doctors" defaultMassage="Doctors: more than 50"/></th></tr></ol>
     <ol><tr><th><FormattedMessage id="Teachers" defaultMassage="Teachers: about 1000"/></th></tr></ol>
-    <ol><tr><th><FormattedMessage id="Location" defaultMassage="Location: Kyrgyzstan, Bishkek"/></th></tr></ol>
     <ol><tr><th><FormattedMessage id="Legal address" defaultMassage="Legal address: 720044 Kyrgyzstan, Bishkek, Mira Ave. 66"/></th></tr></ol>
     <ol><tr><th><FormattedMessage id="Website" defaultMassage="Website: kstu.kg"/></th></tr></ol>
     </ul>

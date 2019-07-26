@@ -23,8 +23,11 @@ export default {
         "FacultiesinMenu":"Faculties",
         "ScheduleinMenu":"Schedule",
         "MapinMenu":"Map",
+        "Reception":"Reception",
+        "Fax":"Fax",
+        "Website":"Website",
         // /******************************Schdule Menu*******************************************/
-        "Studen's Scheduler Menu Title":"student schedule",
+        "Studen's Scheduler Menu Title":"Student Schedule",
         "ShelMenuFaculty":"Falculty",
         "ShelMenuDepart":"Department",
         "ShelMenuGroup":"Group",
@@ -50,8 +53,11 @@ export default {
         "Floor Number":"Floor Number",
         "MapSubmit":"View Map",
         "View all map":"View all map",
-
-
+        "Select":"Select",
+        "Building":"Building",
+        "Select Building First Please":"Select Building First Please",
+        "Floor":"Floor",
+        "Map":"Map",
 // /*********************************Faculty Page**********************************************/
         "Departments":"Departments",
         "Faculties":"Faculties",
@@ -88,8 +94,8 @@ export default {
             "                            and close partnership with Samsung",
         " Development Team Members":" Development Team Members",
         "Team from SKKU:":"Team from SKKU:",
-        "Team from KSTU:":"Team from KSTU:",
-        "Team from MANAS University:":"Team from MANAS University:",
+        "Team from KSTU:":"Team from KSTU: Irina Romanceva, Dinara Mendybaeva",
+        "Team from MANAS University:":"Team from MANAS University: Ainil Kemelova , Аizada Aripzhanova ,Albina",
         //******************************************************about KSTU information page************************************************/
 
         "about KSTU":"It began in 1953, when, due to the acute shortage of highly qualified specialists in the engineering industry of Kyrgyzstan, a technical faculty was established at Kyrgyz State University.\n" +
@@ -108,7 +114,6 @@ export default {
             "Students" :"Students: over 19,000",
             "Doctors":"Doctors: more than 50",
             "Teachers":"Teachers: about 1000",
-            "Location":"Location: Kyrgyzstan, Bishkek",
             "Legal address":"Legal address: 720044 Kyrgyzstan, Bishkek, Mira Ave. 66",
             "Website":"Website: kstu.kg",
         "General knowledge about KSTU":"General knowledge about KSTU",
@@ -128,7 +133,7 @@ export default {
 
     ru:{
         "named after I.Razzakov":"Кыргызский Государственный Технический Университет им. И. Раззакова ",
-        "Welcome to KSTU":"Добро пожаловать в",
+        "Welcome to KSTU":"Добро пожаловать в КГТУ",
         "Name":"Карта",
         "Building_Number":"Номер здания",
         "Floor_Number":"Номер этажа",
@@ -141,22 +146,25 @@ export default {
         "Instituties":"Институты",
         "Information":"Информация",
         // /*****************************Main Page********************************************/
-        "InformationinMenu":"Информации",
+        "InformationinMenu":"Информация",
         "KSTUinMenu":"КГТУ",
         "InstitutesinMenu":"Институты",
         "FacultiesinMenu":"Факультеты",
         "ScheduleinMenu":"Расписание",
-        "MapinMenu":"Карта",
+        "MapinMenu":"Карта", 
+        "Reception":"Кантакты",
+        "Fax":"Fax",
+        "Website":"Website",
         // /******************************/Main Page*******************************************/
         // /******************************Schdule Menu*******************************************/
-        "Studen's Scheduler Menu Title":"расписание студентов",
+        "Studen's Scheduler Menu Title":"Расписание студентов",
         "ShelMenuFaculty":"Факультет",
         "ShelMenuDepart":"Кафедра",
-        "ShelMenuGroup":"группа",
+        "ShelMenuGroup":"Группа",
         "StudentSubmit":"Посмотреть расписание",
 
 
-        "Teacher's Scheduler Menu Title":"расписание учителей",
+        "Teacher's Scheduler Menu Title":"Расписание учителей",
         "TeacherSubmit":"Посмотреть расписание",
 
 
@@ -165,7 +173,7 @@ export default {
         "TeacherScheduleTName":"Имя Учителя",
 
         "TDepartment":"Кафедра",
-        "Professor List Title":"имя учителя",
+        "Professor List Title":"Имя Учителя",
 
         "Mon":"понедельник",
         "Tue":"вторник",
@@ -178,6 +186,11 @@ export default {
         "Floor Number":"Номер этажа",
         "MapSubmit":"Посмотреть карту",
         "View all map":"Посмотреть всю карту",
+        "Select":"Выбрать",
+        "Building":"3дание",
+        "Select Building First Please":"Сначала выберите здание",
+        "Floor":"Этаж",
+        "Map":"Карта",
 // /*********************************Faculty Page**********************************************/
         "Departments":"Кафедры",
         "Faculties":"Факультеты",
@@ -204,10 +217,10 @@ export default {
             "                            the late nineteenth century, and has since greatly expanded its course offerings and\n" +
             "                            reputation, which is attributed to its numerous influential graduates, strong research output,\n" +
             "                            and close partnership with Samsung",
-        " Development Team Members":" Development Team Members",
-        "Team from SKKU:":"Team from SKKU:",
-        "Team from KSTU:":"Team from KSTU:",
-        "Team from MANAS University:":"Team from MANAS University:",
+        " Development Team Members":"  Командa Pазработчиков",
+        "Team from SKKU:":"Команда с  КГУС:",
+        "Team from KSTU:":"Команда с  КГТУ: Ирина Романцева , Динара Мендыбаева",
+        "Team from MANAS University:":"Команда с  Университетa МАНАС:  Айзада Арипжанова , Айнил Кемелова, Албина  ",
         //******************************************************about KSTU information page************************************************/
 
         "about KSTU":"Кыргызский государственный технический университет - Исхак имени государственного технического университета Кыргызстана, Киргизии , первого технического высшего учебного заведения.\n" +
@@ -239,7 +252,7 @@ export default {
         "Legal address":"Адрес:  720044 Кыргызстан, Бишкек, пр. Мира, 66",
         "Website":"Веб-сайт: kstu.kg",
         "KSTU":"КГТУ",
-        "General knowledge about KSTU":"Общие знания о КГТУ",
+        "General knowledge about KSTU":"Информация о КГТУ",
 
 
     },
